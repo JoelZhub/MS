@@ -7,7 +7,7 @@
     font-family: "Ubuntu", sans-serif;
     font-weight: 300;
     font-style: normal;
-    perspective: 900px;
+    perspective:400px;
     overflow: hidden;
     color: #ffffff;
     
@@ -22,7 +22,7 @@
     border-radius: 20px;
     max-width: 1272px;
     height: 864px;
-    transform: translateZ(-400px);
+    transform: translateZ(-150px);
 
 }
 .contenedor .contenido{
@@ -74,6 +74,16 @@
     line-height:30px;
 }
 
+
+.contenido #message-error{
+    color: red;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 12px;
+    font-size: 18px;    
+}
+
+
 .contenido .signIn{
 
     background-color: #fff;
@@ -91,6 +101,11 @@
     font-weight: bold;
     margin-top: 80px;
     margin-bottom: 60px;
+}
+
+ .contenido .signIn .inputs .error-input{
+
+     border-bottom: 1px solid red;
 }
 .contenido .signIn .inputs .email{
 
