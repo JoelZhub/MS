@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signIn.css">
+    <link rel="stylesheet" href="style/signIn.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>            
 
             <link
@@ -64,12 +64,14 @@
                     <div class="email">
                         <h5>Correo: </h5>
                         <input type="text" name="correo" id="correo"  >
+                        <i class="email-icon bi bi-envelope" id="email-icon" ></i>
                     </div>
 
                     <div class="password">
                         <h5>Contraseña</h5>
-                        
-                        <input type="password" maxlength="8"  name="password" id="password" class="error-input" >
+                
+                        <input type="password" maxlength="16" minlength="6"  name="password" id="password" class="error-input" >
+                        <i class="btn-eye-password bi bi-eye" id="eye-icon" ></i>
                     </div>
 
                     <p id="message-error"></p>
@@ -77,7 +79,7 @@
                     <div class="btns">
                         <button type="button"  name="btn-inicio" class="btn-ingreso">Ingresar</button>
                         
-                        <img src="google.png" alt="icon-google" width="20px" height="20px">
+                        <img src="img/google.png" alt="icon-google" width="20px" height="20px">
                         <button  class="google-btn">Iniciar con Google</button>
                         
                     </div>
@@ -99,7 +101,7 @@
       </div>
 
 
-    <script src="main.js" defer></script>
+    <script src="js/main.js" defer></script>
     
 </body>
 </html>
