@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #ffffff;
+    
+}
+
+.menu{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    background-color: #161C25;
+    height: 106px;
+    
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .logo{
+    display: flex;
+     gap: 20px;
+    width: 300px;
+   
+}
+.menu .logo i{
+    font-size: 70px;
+    font-weight: 800;
+    color: #2563EB;
+    opacity: 0.5;
+}
+.menu .logo h2{
+    font-size: 70px;
+    font-weight: 800;
+}
+.menu .btns {
+    display: flex;
+    color: #000;
+    gap: 20px;
+}
+.menu .btns button{
+
+    background-color: transparent;
+    color: #fff;
+    width: 115px;
+    font-weight: bold;
+    border: none;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.menu .btns button:first-child{
+    background-color: #2B6853;
+}
+.menu .btns button:last-child{
+    color: #000;
+    background-color: #ffffff;
+}
+.menu .btns button:hover{
+    filter: brightness(0.8);
+}
+.contenido {
+height: 100vh;
+width: 100%;
+position: absolute;
+margin-top: 100px;
+}
+
+.contenido .banner{
+
+    background-image: url("..//img/banner.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 540px;
+    opacity: 0.9;
+    padding: 20px 30px;
+    background-size: cover;
+    background-position: center;
+   
+
+}
+.contenido .banner .banner-contenido {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 60px;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    
+}
+
+.contenido .banner .banner-contenido .text{
+        width: 524px;
+}
+.contenido .banner .banner-contenido .text h1{
+       font-size: 40px;
+       font-weight: bold;
+       letter-spacing: 1px;
+        margin-bottom: 10px;
+}
+
+.contenido .banner .banner-contenido .text p{
+       font-size: 15px; 
+       letter-spacing: 1px;
+       line-height: 25px;
+        margin-bottom: 10px;
+}
+.contenido .banner .banner-contenido .btn-leer-mas{
+        background: #2B6853;
+        color: #ffffff;
+        height: 40px;
+        border-radius: 12px;
+        width: 197px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+}   
+.contenido .banner .banner-contenido .btn-leer-mas:hover{
+   filter: brightness(0.8);
+}
+
+.contenido .form .form-banner{
+
+        background-color: rgba(26, 24, 30, 54%) ;
+        color: #ffffff; 
+        border-radius: 16px;
+        width: 435px;
+        padding: 10px 10px;
+        justify-content: center;
+        align-items: center;
+        height: 390px;
+        flex-direction: column;
+        border-left: 3px solid #ffff;
+        border-bottom: 4px solid #ffff;
+        
+}
+.contenido .form .form-banner h3{
+    color: #ffff;
+    font-weight: bold;
+    height: 65px;
+    margin-top: 10px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 23px;
+}
+.contenido .form .form-banner .input-empresa, .input-email{
+
+    display: flex;
+    width: 100%;
+    
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.contenido .form .form-banner  input{
+    background-color: transparent;
+    border: none;
+    width: 281px;
+    outline: none;
+    border-bottom: 2px solid #ffffff;
+}
+.contenido .form .form-banner .input-empresa p{
+font-size: 19px;
+    color: #ffffff;
+   font-weight: 900;
+}
+.contenido .form .form-banner .input-email p{
+font-size: 19px;
+    color: #ffffff;
+   font-weight: 900;
+
+}
+.contenido .form .form-banner .btn-envio{
+    text-align: center;
+    
+}
+.contenido .form .form-banner .btn-envio button{
+    margin-top: 45px;
+    background-color: rgba(37, 99, 235, 50%);
+    width: 201px;
+    height: 48px;
+    border: none;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 16px;
+}
+.contenido .form .form-banner .btn-envio .icon-send{
+    margin-left: -45px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: -10px;
+
+}
+.contenido .aboutUs{
+    width: 100%;
+    margin: 0 auto;
+    height: 557px;
+    color: #000;
+    display: flex;
+}
+.contenido .aboutUs p{
+    color: #000000;
+}
+.contenido .aboutUs .aboutUs-contenido{
+    color: #000;
+    display: flex;
+    width: 100%;
+    padding: 20px 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+.contenido .aboutUs .aboutUs-contenido .aboutUs-img{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    perspective: 400px;
+}
+.contenido .aboutUs .aboutUs-contenido .img-about-us{
+    background-image: url("../img/about.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 408px;
+    height: 328px;
+    transform: translateZ(-100px);
+    z-index: 3;
+    position: absolute;
+    
+}
+.contenido .aboutUs .aboutUs-contenido .aboutUs-img .square-top{
+
+    width: 229px;
+    height: 182px;
+    z-index: 1;
+    transform: translateZ(-50px);
+    position: absolute;
+    background-color: #161C25;
+    top: -35%;
+    right: 25%;
+   
+}
+.contenido .aboutUs .aboutUs-contenido .aboutUs-img .square-bottom{
+
+    width: 229px;
+    height: 182px;
+    z-index: 1;
+    transform: translateZ(-50px);
+    position: absolute;
+    background-color: #434A54;
+    top:  95%;
+    bottom: 0;
+    left: -5%;
+   
+}.contenido .aboutUs .aboutUs-contenido .aboutUs-text{
+    width: 100%;
+     height: 400px;
+     
+   
+}
+.contenido .aboutUs .aboutUs-contenido .aboutUs-text h4{
+    color: #000000;
+    font-weight: bold;
+    font-size: 49px;
+    margin-bottom: 20px;
+    
+}
+.contenido .aboutUs .aboutUs-contenido .aboutUs-text p{
+    font-size: 17px;
+    width: 564px;
+    height: 130px;
+    margin-bottom: 20px;
+    line-height: 30px;
+
+}
+.contenido .aboutUs .aboutUs-contenido .aboutUs-text .btn-leerMas-about{
+    
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 197px;
+    position: relative;
+    height: 45px;
+    cursor: pointer;
+    color: #fff;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    background-color: #161C25;
+  
+}
+.contenido .aboutUs .aboutUs-contenido .aboutUs-text .btn-leerMas-about span{
+    z-index: 4;
+    position: absolute;
+    top: 10px;
+    left: 30%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contenido .aboutUs .aboutUs-contenido .aboutUs-text .btn-leerMas-about::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:  0;
+    height: 100%;
+    width: 0;
+    background-color: #2B6853;
+    z-index: 0;
+    transition: none;
+}
+
+.contenido .aboutUs .aboutUs-contenido .aboutUs-text .btn-leerMas-about:hover::before{
+    animation: relleno 0.5s forwards;
+    
+}
+
+/* testimonios */
+
+.testimonios{
+    max-width: 100%;
+    height: 500px;
+    color: #000;
+    margin-top: 80px;
+    perspective: 600px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 60px;
+    
+}
+
+.testimonios img{
+        width: 30px;
+        height: 30px;
+}
+
+.testimonios .text-testimonios{
+    width: 100%;
+    height: 300px;
+     transform: translateZ(-40px);
+    
+}
+.testimonios .text-testimonios h4{
+    font-weight: bold;
+    font-size: 49px;
+    color: #000;
+    margin-bottom: 20px;
+    
+}
+
+.testimonios .text-testimonios p{
+    color: #000;
+}
+.testimonios .text-testimonios .sub-title{
+    font-weight:600;
+    font-size: 27px;
+}
+
+.testimonios .text-testimonios p{
+    margin-top: 20px;
+    font-size: 17px;
+    width: 600px;
+    line-height: 28px;
+}
+.testimonios .cards-testimonios{
+    display: grid;
+    margin-top: -130px;
+    transform: translateZ(-20px);
+    padding: 10px 20px;
+    flex-direction: wrap;
+}
+.testimonios .cards-testimonios .card-test{
+    background-color: #fff;
+    width:472px;
+    color: #000;
+    box-shadow: 0 2px 2px 0 #000;   
+    transform: translateY(50px);
+    opacity: 0;
+    transition:all 0.6s ease-out;
+    height: 142px;
+    border-right: 2px solid #000;
+    border-radius: 13px;
+}
+
+.testimonios .cards-testimonios .card-test.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonios .cards-testimonios .card-test .title-icons{
+    display: flex;
+    padding: 10px;
+    color: #000;
+    justify-content: space-between;
+}
+
+.testimonios .cards-testimonios .card-test .title-icons .info-user  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     gap: 9px;
+
+
+}
+.testimonios .cards-testimonios .card-test .title-icons .info-user span{
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.testimonios .cards-testimonios .card-test .title-icons .star-icons i{
+
+    width: 15px;
+    height: 15px;   
+    font-size: 15px;
+    color: rgb(255, 215, 0);
+}
+
+.testimonios .cards-testimonios .card-test .text{
+    padding: 10px;
+   width: 100%;
+    
+}
+.testimonios .cards-testimonios .card-test .text p{
+    color: #000;
+    font-size: 15px;
+    font-weight:normal;
+    line-height: 20px;
+}
+.servicios{
+    width: 80%;
+    padding: 10px 20px;
+    height: 519px;
+    margin: 0 auto;
+    align-items: center;
+}
+.servicios img{
+
+    width: 40px;
+    height: 40px;
+}
+.servicios .title-content{
+
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.servicios .title-content h4{
+    font-size: 40px;
+    width: 400px;
+    font-weight: bold;
+    color: #000;
+}
+
+ .servicios .title-content .text-title-content .seccion-lectura{
+    display: flex;
+    width: 600px;
+    height: 28px;
+    gap: 5px;
+    cursor: pointer;
+ }
+
+.servicios .title-content .text-title-content a{
+    
+    color: #161C25;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+}
+
+.servicios .title-content .text-title-content i{
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+/*cars */
+
+
+.servicios .servicio-card .servicio-card-contenido p{
+    color: #000;
+    font-size: 13px;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.servicios .servicios-content{
+
+
+    width: 100%;
+    height: 500px;
+    display: flex;
+    color: #000;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.servicios .servicios-content .servicio-card {
+
+    width: 302px;
+    height: 340px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #000;
+}
+.servicios .servicios-content .servicio-card .servicio-card-contenido .title{
+    font-weight: bold;
+    font-size: 16px;
+}
+.servicios .servicios-content .servicio-card .servicio-card-contenido button{
+
+      background-color: #2B6853;
+        width: 138px;
+        height: 34px;
+        color: #fff;
+        border: none;
+        font-weight: bold;
+        font-size: 14px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 12px;
+}
+.servicios .servicios-content .servicio-card .servicio-card-contenido img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* tarjeat pricipa; */
+.servicios .servicios-content .first-card{
+        background-color: #161C25;
+        color: #fff;
+        width: 302px;
+        height: 340px;
+        border-radius: 50%;
+}
+.servicio-card #first-card{
+     background-color: #161C25;
+        color: #fff;
+        width: 302px;
+        height: 340px;
+        border-radius: 50%;
+}
+
+.servicios .servicios-content .first-card .servicio-card-contenido p{
+    color: #fff;
+    font-size: 13px;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.servicios .servicios-content .first-card .servicio-card-contenido .cambio-color{
+
+        background-color: #fff;
+        width: 138px;
+        height: 34px;
+        color: #161C25;
+        border: none;
+        font-weight: bold;
+        font-size: 14px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 12px;
+}
+
+
+.servicios .servicios-content .servicio-card .servicio-card-contenido button:hover{
+    filter: brightness(0.8);
+}
+
+@keyframes relleno{
+
+    0%{width: 0;}
+    100%{width: 100%;}
+
+}
+
