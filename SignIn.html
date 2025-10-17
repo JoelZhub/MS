@@ -61,17 +61,16 @@
                 
                 <div class="inputs">
 
-                    <div class="email">
+                    <div class="email" id="email_contenedor" tabindex="0">
                         <h5>Correo: </h5>
                         <input type="text" name="correo" id="correo"  >
-                        <i class="email-icon bi bi-envelope" id="email-icon" ></i>
+                        <i class="email-icon bi bi-envelope ocultar " id="email-icon" ></i>
                     </div>
 
-                    <div class="password">
+                    <div class="password" id="password_contenedor" tabindex="-1" >
                         <h5>Contraseña</h5>
-                
                         <input type="password" maxlength="16" minlength="6"  name="password" id="password" class="error-input" >
-                        <i class="btn-eye-password bi bi-eye" id="eye-icon" ></i>
+                        <i class="btn-eye-password bi bi-eye ocultar" id="eye-icon" ></i>
                     </div>
 
                     <p id="message-error"></p>

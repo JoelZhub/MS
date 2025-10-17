@@ -4,25 +4,19 @@
     const message = document.querySelector('#message-error');
     const email_icon = document.querySelector("#email-icon");
     const password_icon = document.querySelector("#eye-icon");
+    const password_contenedor = document.querySelector("#password_contenedor");
 
-
-    email.addEventListener("input", () =>{
-
-        if(email.value != ""){
-            email_icon.style.display = "inline";
-                
-        }else{
-            email_icon.style.display = "none";
-        }   
+    email.addEventListener("focus", () =>{
+        email_icon.classList.remove("ocultar");
+        
     });
 
-    password.addEventListener("input", () => {
-        
-        if(password.value != ""){
-        password_icon.style.display = "inline";
-        let click = true;
+  
+    password.addEventListener("focus", ()=> {
 
-        password_icon.addEventListener("click", () =>{
+            password_icon.classList.remove("ocultar");
+             let click = true;
+            password_icon.addEventListener("click", () =>{
             
             if(click){
                 password_icon.setAttribute("class", "btn-eye-password  bi bi-eye-slash");
@@ -35,11 +29,14 @@
                   click=true;
             }
             
+        });        
         });
-        }else{
-            password_icon.style.display = "none";     
-        }
-    });
+
+       
+        
+        
+     
+
 
 
  // btn.addEventListener("click",  () =>{    

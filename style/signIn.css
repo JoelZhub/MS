@@ -142,7 +142,6 @@
     font-weight: 600;
     font-size: 22px;
     position: absolute;
-    display: none;
     right:  20px;
     animation:myAnimation 480ms;
     transition: 3ms ease;
@@ -175,20 +174,22 @@
     font-size: 20px;
 }
 
-.contenido .signIn .inputs .password i{
+.contenido .signIn .inputs .password #eye-icon{
 
     color: #000;
     top: -5px;
     font-weight: 600;
     font-size: 20px;
     position: absolute;
-    display: none;
     right:  20px;
     cursor: pointer;
     animation:myAnimation 480ms;
     transition: 3ms ease;
 }
 
+.contenido .signIn .inputs  .ocultar{
+ display: none;
+}
 .contenido .signIn .inputs .password h5{
     font-size: 22px;
     font-weight: 600;
