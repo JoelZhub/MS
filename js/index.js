@@ -1,5 +1,7 @@
 const cards = document.querySelectorAll('.card-test');
 
+const groups = document.querySelectorAll(".group-img")
+
 function cheackCards(){
 
     const bottom = window.innerHeight * 0.85;
@@ -40,8 +42,33 @@ cards_Servicio.forEach(cardS => {
         if(!cardContieneId){
             cardS.addEventListener("mouseleave", ()=>{
                 cardS.classList.remove("first-card");
-
-
             });
         }
 });
+
+
+let contadorIndice = 0;
+
+function showSelection(index){
+    groups.forEach((group, indiceActual) => {
+        group.style.display = indiceActual === index ? 'flex' : 'none'
+    });
+}
+
+function changeSelection(dirrecion){
+
+    if(dirrecion === "next"){
+        contadorIndice++;
+        if(contadorIndice >= groups.length) contadorIndice = 0;
+    }else if(dirrecion === "prev"){
+        contadorIndice--;
+        if(contadorIndice < 0) contadorIndice = groups.length - 1;
+    }
+    showSelection(contadorIndice);
+
+}
+
+showSelection(contadorIndice);
+
+document.querySelector("#arrow-right").addEventListener("click", ()=> changeSelection('next'));
+document.querySelector("#arrow-left").addEventListener("click", ()=> changeSelection('prev'));
