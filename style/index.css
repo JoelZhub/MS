@@ -8,6 +8,8 @@
     font-weight: 300;
     font-style: normal;
     color: #ffffff;
+    list-style: none;
+    text-decoration: none;
     
 }
 
@@ -472,7 +474,7 @@ font-size: 19px;
     color: #161C25;
     font-weight: bold;
     position: relative;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .servicios .title-content .text-title-content i{
@@ -637,6 +639,7 @@ font-size: 19px;
 }
 .slide-afiliados .slide .slide-img .group-img{
     width: 100%;
+    cursor: pointer;
     display: flex;
     align-items: center;
     color: #000;    
@@ -661,10 +664,109 @@ font-size: 19px;
 }
 
 .section-footer .footer{
-   display: flex;
-   justify-content: space-between;
    color: #000;
    background-color: #161C25;
    max-width: 100%;
    min-height: 150px;
+   padding:20px 30px;
+   margin-top: 50px;
+}
+.section-footer .footer .contenido-first{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #fff;
+    
+}
+.section-footer .footer .contenido-first .info{
+    max-width: 300px;
+    font-size: 12px;
+
+}
+.section-footer .footer .contenido-first .info p{
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+.section-footer .footer .contenido-first .info .logo-footer{
+    display: flex;
+    width: 200px;
+    margin-bottom: 8px;
+    font-size: 50px;
+    gap: 8px;
+    
+}
+.section-footer .footer .contenido-first .info .logo-footer h4{
+    font-weight: bold;
+}
+.section-footer .footer .contenido-first .info .logo-footer i{
+    color: #2563EB;
+    font-weight: bold;  
+}
+.section-footer .footer .contenido-first .contenido-second h4{
+    
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 15px;
+} 
+.section-footer .footer .contenido-first .contenido-second ul li{
+    margin-bottom: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.section-footer .footer .contenido-first .requiere-asistencia{
+    display: grid;
+    flex-direction: column;
+    width: 300px;
+}
+.section-footer .footer .contenido-first .requiere-asistencia button{
+    background-color: #2B6853;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    width:350px;
+    height: 32px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.section-footer .footer .contenido-first .requiere-asistencia .section-info-title{
+    display: flex;
+    font-weight: bold;
+    color: #fff;
+    max-width: 350px;
+    margin-bottom: 8px;
+    justify-content: space-between;
+   
+}
+.section-footer .footer .contenido-first .requiere-asistencia .section-info-title p{
+    font-weight: bold;
+}
+
+.section-footer .footer .contenido-first .requiere-asistencia .section-info-contenido{
+
+    display: flex;
+    font-weight: bold;
+    color: #fff;
+    max-width: 350px;
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
+.section-footer .section-derechos-politicas{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: normal;
+}
+.section-footer .section-derechos-politicas .terminino-politicas ul{
+    display: flex;
+    gap: 30px;
+}
+.section-footer .section-derechos-politicas .terminino-politicas ul li a{
+    cursor: pointer;
+
 }
