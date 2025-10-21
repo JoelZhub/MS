@@ -663,6 +663,172 @@ font-size: 19px;
     cursor: pointer;
 }
 
+/* cookies */
+
+
+.cookies{
+
+    background-color: #161C25;
+    color: #fff;
+    max-width: 100%;
+    padding: 20px 30px;
+    min-height: 250px;
+    position: fixed;
+    z-index: 999;
+    margin-top: 350px;
+}
+.cookies .text-cookies{
+line-height: 24px;
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: justify;
+}
+.cookies .contenedor-btns{
+    float: right;
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+  
+}
+.cookies .contenedor-btns button{
+    border: none;
+    width: 160px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #161C25;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    height: 35px;
+    cursor: pointer;
+}
+.cookies .contenedor-btns .btn-first{
+    background-color:#2B6853;
+    border: none;
+    width: 200px;
+}
+.cookies .contenedor-btns .btn-first:hover{
+    background-color: #161C25;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.cookies .contenedor-btns .btn-second:hover{
+    background-color: #2B6853;
+    color: #fff;
+    border: none;
+}
+
+.cookies .contenedor-first{
+
+    background-color: #fff;
+    border-radius: 12px;
+    overflow-y: scroll;
+     height: 650px;
+    width: 600px;
+    display: none;
+     transform: translate(-50%, -50%);
+     position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+}
+.cookies .contenedor-first p{
+    color: #000;
+    font-size: 12px;
+    width: 500px;
+    margin: 0 auto;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.cookies .contenedor-first .contenedor-configuracion{
+    overflow-y: scroll;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    color: #000;
+}
+
+.cookies .contenedor-first .contenedor-configuracion #closeWindows{
+    color: #000;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 900;
+}.cookies .contenedor-first .contenedor-configuracion .text-cookies{
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #161C25 ;
+    margin-bottom: 20px;
+}.cookies .contenedor-first .contenedor-configuracion .text-cookies h5{
+    color: #2B6853;
+    font-weight: bold;
+    font-size:15px ;
+}
+.cookies .contenedor-first .contenedor-configuracion .text-cookies p{
+    color: #000;
+    font-size: 11px;
+    width: 500px;
+   
+}
+.cookies .contenedor-first .contenedor-configuracion .contenedor-cookis-rendimeinto{
+    border-bottom: 2px solid #161C25;
+    padding-bottom: 30px;
+    width: 500px;
+    margin: 0 auto;
+}
+.cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: #000000;
+}
+.cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento .title-cookies-rendimiento{
+    display: flex;
+    gap: 8px;
+     margin-top: 10px;
+    color: #000000;
+}
+.cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento .title-cookies-rendimiento h5{
+    color: #000;
+    font-weight: bold;
+}
+.cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento .title-cookies-rendimiento i{
+    color: #000;
+    cursor: pointer;
+}
+.cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento label{
+
+    background-color: #2B6853;
+    border-radius: 20px;
+    width: 50px;
+    height: 25px;
+    padding: 1px;
+}
+.cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento label input{
+    float: right;
+    width: 20px;
+    height: 23px;
+    border: none;
+}
+.cookies #overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0,  0.7);
+    display: none;        
+    z-index: 10;     
+    display: none;
+}
+
+
+/*  */
+
 .section-footer .footer{
    color: #000;
    background-color: #161C25;
@@ -728,6 +894,7 @@ font-size: 19px;
     font-weight: bold;
     font-size: 15px;
     width:350px;
+    cursor: pointer;
     height: 32px;
     margin-bottom: 10px;
     border-radius: 5px;

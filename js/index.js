@@ -72,3 +72,36 @@ showSelection(contadorIndice);
 
 document.querySelector("#arrow-right").addEventListener("click", ()=> changeSelection('next'));
 document.querySelector("#arrow-left").addEventListener("click", ()=> changeSelection('prev'));
+
+
+const btnCookiesAceptar = document.querySelector(".btn-first");
+
+const cookies = document.querySelector(".cookies");
+
+const contenedorConfiguracion = document.querySelector(".contenedor-first");
+
+const btnConfigurarCookies = document.querySelector(".btn-second");
+
+const overlay = document.querySelector("#overlay");
+
+const closeWindowsConfigurarCookies = document.querySelector("#closeWindows");
+
+btnCookiesAceptar.addEventListener("click", ()=>{
+
+    cookies.style.display ="none";
+
+});
+
+btnConfigurarCookies.addEventListener("click", () => {
+
+    contenedorConfiguracion.style.display = "block";
+    overlay.style.display = "block";
+
+    closeWindowsConfigurarCookies.addEventListener("click", () => {
+      contenedorConfiguracion.style.display = "none";
+     overlay.style.display = "none";
+
+});
+
+});
+
