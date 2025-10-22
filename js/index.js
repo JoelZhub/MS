@@ -34,25 +34,11 @@ const cards = document.querySelectorAll('.card-test');
 
 const groups = document.querySelectorAll(".group-img")
 
-const iniciar = document.querySelector(".btn-inicio")
+const iniciar = document.querySelector(".btn-inicio");
 
-const registro = document.querySelector(".btn-registrarse");
+const register = document.querySelector(".btn-registrarse");
 
-
-iniciar.addEventListener("click", () => {
- 
-    window.location.href = "SignIn.html";
-
-
-});
-register.addEventListener("click", () => {
- 
-    window.location.href = "register.html";
-
-
-});
-
-
+const leerMas = document.querySelectorAll(".btn-leer-mas");
 
 function cheackCards(){
 
@@ -185,16 +171,25 @@ spanBtnCookies.addEventListener("click", () => {
 
 });
 
+
 optimizar.addEventListener("click", (event) => { 
+
         event.preventDefault();
         const emailValor = email.value;
-        if((empresa.value !== ""  && emailValor !== "") && (emailValor.includes("@")  && emailValor.includes(".")) ){
+
+        if(empresa.value !== ""  && emailValor !== ""){
+
+            if(emailValor.includes("@")  && emailValor.include(".")){
+
                 message.textContent = "¡Gracias! Tu correo ha sido registrado y pronto recibirás consejos para optimizar tus reuniones.";
                 message.classList.add("show");
                 setTimeout(() => {
                      message.classList.remove("show");
 
                 },2500 );
+
+            }
+
         }else{
 
                 message.textContent = "Ingrese un correo y nombre validos.";
@@ -204,6 +199,32 @@ optimizar.addEventListener("click", (event) => {
 
                 },2500 );
             
+
         }
+
+});
+
+iniciar.addEventListener("click", () => {
+ 
+    window.location.href = "SignIn.html";
+
+
+});
+register.addEventListener("click", () => {
+ 
+    window.location.href = "register.html";
+
+
+});
+
+leerMas.forEach(btn =>{
+
+
+    btn.addEventListener("click", () => {
+
+
+        window.location.href = "404Error.html";
+
+    });
 
 });
