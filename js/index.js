@@ -1,6 +1,58 @@
+const btnCookiesAceptar = document.querySelectorAll(".btn-first");
+
+const cookies = document.querySelector(".cookies");
+
+const contenedorConfiguracion = document.querySelector(".contenedor-first");
+
+const btnConfigurarCookies = document.querySelector(".btn-second");
+
+const overlay = document.querySelector("#overlay");
+
+const closeWindowsConfigurarCookies = document.querySelector("#closeWindows");
+
+const btnRechazar = document.querySelector(".btn-rechazar");
+
+const cambioCaret = document.querySelector("#caret");
+
+const cambioCaretText = document.querySelector("#removeText");
+
+const optimizar = document.querySelector(".btn-optimizar");
+
+const message = document.querySelector(".message-form");
+
+const empresa = document.querySelector("#empresa")
+
+const email = document.querySelector("#email");
+
+const spanBtnCookies = document.querySelector(".slider-input");
+
+const label = document.querySelector("#label");
+
+let containtClass = true;
+
 const cards = document.querySelectorAll('.card-test');
 
 const groups = document.querySelectorAll(".group-img")
+
+const iniciar = document.querySelector(".btn-inicio")
+
+const registro = document.querySelector(".btn-registrarse");
+
+
+iniciar.addEventListener("click", () => {
+ 
+    window.location.href = "SignIn.html";
+
+
+});
+register.addEventListener("click", () => {
+ 
+    window.location.href = "register.html";
+
+
+});
+
+
 
 function cheackCards(){
 
@@ -46,7 +98,6 @@ cards_Servicio.forEach(cardS => {
         }
 });
 
-
 let contadorIndice = 0;
 
 function showSelection(index){
@@ -74,21 +125,13 @@ document.querySelector("#arrow-right").addEventListener("click", ()=> changeSele
 document.querySelector("#arrow-left").addEventListener("click", ()=> changeSelection('prev'));
 
 
-const btnCookiesAceptar = document.querySelector(".btn-first");
+btnCookiesAceptar.forEach(aceptar =>{
 
-const cookies = document.querySelector(".cookies");
+aceptar.addEventListener("click", ()=>{
 
-const contenedorConfiguracion = document.querySelector(".contenedor-first");
+         cookies.style.display ="none";
 
-const btnConfigurarCookies = document.querySelector(".btn-second");
-
-const overlay = document.querySelector("#overlay");
-
-const closeWindowsConfigurarCookies = document.querySelector("#closeWindows");
-
-btnCookiesAceptar.addEventListener("click", ()=>{
-
-    cookies.style.display ="none";
+});
 
 });
 
@@ -98,10 +141,69 @@ btnConfigurarCookies.addEventListener("click", () => {
     overlay.style.display = "block";
 
     closeWindowsConfigurarCookies.addEventListener("click", () => {
-      contenedorConfiguracion.style.display = "none";
+    contenedorConfiguracion.style.display = "none";
      overlay.style.display = "none";
 
-});
 
 });
 
+});
+
+btnRechazar.addEventListener("click", () => {
+        cookies.style.display = "none";
+ });
+
+cambioCaret.addEventListener("click", () => {
+
+   
+    if(containtClass){
+        cambioCaretText.style.display = "none";
+        cambioCaret.setAttribute("class","bi bi-caret-up-fill");
+        containtClass = false;
+    }
+    else{
+         cambioCaretText.style.display = "block";
+         cambioCaret.setAttribute("class","bi bi-caret-down-fill");
+         containtClass = true;
+
+    }
+
+});
+
+spanBtnCookies.addEventListener("click", () => {
+
+    const contiene = label.classList.contains("colorLabel");
+    const contien2 = spanBtnCookies.classList.contains("slider-efecto");
+
+    if(contiene && contien2){
+        label.classList.remove("colorLabel");
+        spanBtnCookies.classList.remove("slider-efecto");
+    }else{
+        label.classList.add("colorLabel");
+         spanBtnCookies.classList.add("slider-efecto");
+    }
+
+});
+
+optimizar.addEventListener("click", (event) => { 
+        event.preventDefault();
+        const emailValor = email.value;
+        if((empresa.value !== ""  && emailValor !== "") && (emailValor.includes("@")  && emailValor.includes(".")) ){
+                message.textContent = "¡Gracias! Tu correo ha sido registrado y pronto recibirás consejos para optimizar tus reuniones.";
+                message.classList.add("show");
+                setTimeout(() => {
+                     message.classList.remove("show");
+
+                },2500 );
+        }else{
+
+                message.textContent = "Ingrese un correo y nombre validos.";
+                message.classList.add("show");
+                setTimeout(() => {
+                     message.classList.remove("show");
+
+                },2500 );
+            
+        }
+
+});

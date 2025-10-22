@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS - Registre y disfrusta de los beneficios de nuestro sistema</title>
+
     <link rel="stylesheet" href="style/signIn.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>            
 
@@ -12,13 +14,10 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
         crossorigin="anonymous"
         />
-
         <link 
         rel="stylesheet" 
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     >
-
-
 
         <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -27,11 +26,10 @@
         ></script>
 
 
-    <title>MS - Inicio de seccion</title>
 </head>
 <body>
 
-
+    
       <div class="contenedor">
         <section class="contenido">
             <div class="text-form">
@@ -66,22 +64,22 @@
 
                     <div class="password" id="password_contenedor" tabindex="-1" >
                         <h5>Contraseña</h5>
-                        <input type="password" maxlength="16" minlength="6"  name="password" id="password">
+                        <input type="password" maxlength="16" minlength="6"  name="password" id="password" class="error-input" >
                         <i class="btn-eye-password bi bi-eye ocultar" id="eye-icon" ></i>
                     </div>
 
-                    <div id="message-error"></div>
+                    <p id="message-error"></p>
 
                     <div class="btns">
-                        <button type="button"   name="btn-inicio" class="btn-ingreso">Ingresar</button>
+                        <button type="button"  name="btn-inicio" class="btn-ingreso">Registrarte</button>
+                        
                         <img src="img/google.png" alt="icon-google" width="20px" height="20px">
                         <button  class="google-btn">Iniciar con Google</button>
                         
                     </div>
 
                     <div class="forgot-password">
-                        <a href="404Error.html" >Olvidaste tu Contraseña?</a>
-                        <p>No tienes una cuenta? <a href="registe.html">Presiona aqui</a></p>
+                        <a href="SignIn.html">Tienes una cuenta?</a>
                     </div>
 
 
@@ -96,7 +94,6 @@
       </div>
 
 
-    <script src="js/main.js" defer></script>
     
 </body>
 </html>

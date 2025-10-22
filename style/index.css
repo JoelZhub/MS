@@ -154,7 +154,6 @@ width: 100%;
 
     display: flex;
     width: 100%;
-    
     justify-content: space-around;
     margin-top: 50px;
 }
@@ -198,6 +197,25 @@ font-size: 19px;
     font-size: 18px;
     margin-top: -10px;
 
+}
+.contenido .form .message-form{
+    background-color: #2B6853;
+    width: 400px;
+    float: right;
+    margin-top: 20px;
+    height: 70px;
+    padding: 10px 20px;
+    text-align: center;
+    color: #ffff;
+    font-weight: normal;
+    opacity: 0;
+    border-radius: 4px 4px 0 0 ;
+  transform: translateY(30px);
+    transition: transform  0.5s ease, opactiy 0.5 ease;
+}
+.contenido .form  .show{
+    opacity: 1;
+    transform: translateY(0);
 }
 .contenido .aboutUs{
     width: 100%;
@@ -722,14 +740,16 @@ line-height: 24px;
 
     background-color: #fff;
     border-radius: 12px;
-    overflow-y: scroll;
-     height: 650px;
+    max-height: 730px;
     width: 600px;
+    overflow: hidden;
+    border-radius: 12px;
     display: none;
-     transform: translate(-50%, -50%);
-     position: fixed;
+    transform: translate(-50%, -50%);
+    position: fixed;
     top: 50%;
     left: 50%;
+     margin-bottom: 40px;
     z-index: 20;
 }
 .cookies .contenedor-first p{
@@ -741,9 +761,51 @@ line-height: 24px;
     text-align: justify;
 }
 
+.cookies .contenedor-first .btn-configuracion-cookies{
+    position: fixed;
+    width: 600px;
+    top: 80%;
+    z-index: 999;
+    min-height: 140px;
+   
+    background-color: #ffff;
+    border-top: 1px solid #161C25;
+}
+.cookies .contenedor-first .btn-configuracion-cookies .sectio-btn{
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    float: right;
+}
+.cookies .contenedor-first .btn-configuracion-cookies .sectio-btn button{
+    color: #000;
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #161C25;
+    background-color: transparent;
+    border-radius: 8px;
+}
+.cookies .contenedor-first .btn-configuracion-cookies .sectio-btn button:hover{
+    filter:brightness(0.7) ;
+}
+
+ .cookies .contenedor-first .btn-configuracion-cookies .sectio-btn .btn-first{
+    background-color: #161C25;
+    color: #fff;
+    width: 220px;
+ }
+
 .cookies .contenedor-first .contenedor-configuracion{
-    overflow-y: scroll;
+
     padding: 20px;
+    height: 700px;
+    overflow-y: scroll;
+    overflow-x: none;
+    position: relative;
     background-color: #fff;
     text-align: center;
     color: #000;
@@ -753,13 +815,15 @@ line-height: 24px;
     color: #000;
     float: right;
     font-size: 30px;
+    transition: all 0.3ms ease-in;
     cursor: pointer;
     font-weight: 900;
-}.cookies .contenedor-first .contenedor-configuracion .text-cookies{
+}
+.cookies .contenedor-first .contenedor-configuracion .text-cookies{
     width: 500px;
     margin: 0 auto;
-    margin-top: 50px;
-    padding-bottom: 30px;
+    margin-top: 30px;
+    padding-bottom: 20px;
     border-bottom: 2px solid #161C25 ;
     margin-bottom: 20px;
 }.cookies .contenedor-first .contenedor-configuracion .text-cookies h5{
@@ -801,18 +865,73 @@ line-height: 24px;
     cursor: pointer;
 }
 .cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento label{
-
+    position: relative;
+    display: inline-block;
     background-color: #2B6853;
     border-radius: 20px;
-    width: 50px;
-    height: 25px;
+    width: 60px;
+    height: 27px;
     padding: 1px;
+    padding: 5px;
+}
+.cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento .colorLabel{
+    background-color: #434A54;
 }
 .cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento label input{
-    float: right;
-    width: 20px;
-    height: 23px;
-    border: none;
+   opacity: 0;
+   width: 0;
+   height: 0;
+     padding: 8px;
+  
+}.cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento  .slider-input{
+    position: absolute;
+  cursor: pointer;
+  top: 14px;
+  padding: 6px;
+  left: 30px;
+  padding: 8px;
+  bottom: 0;
+  transition: 0.4s;
+  border-radius: 34px;
+}.cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento .slider-input::before{
+
+position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+
+}
+
+.cookies .contenedor-first .contenedor-configuracion .cookies-rendimiento .slider-efecto{
+      transform: translateX(-33px);
+}
+.cookies .contenedor-first .contenedor-configuracion .contenedor-cookis-rendimeinto .text-rendimiento h5{
+        color: #000;
+        text-align: left;
+        margin-top: 8px;
+        font-weight: 600;
+        font-size: 11px;
+        margin-bottom: 8px;
+}
+
+.cookies .contenedor-first .contenedor-configuracion .uso-cookies h5{
+
+    color: #2B6853;
+    font-weight: 600;
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.cookies .contenedor-first .contenedor-configuracion .uso-cookies p{
+    margin-top: 10px;
 }
 .cookies #overlay{
     position: fixed;

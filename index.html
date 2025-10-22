@@ -53,7 +53,7 @@
         <div class="contenedor-configuracion">         
                  <i id="closeWindows" class="bi bi-x-lg"></i>
                 <div class="text-cookies">
-                    <h5>Uso de Cookies en el Portal Web BHD.</h5>
+                    <h5>Uso de Cookies en el Portal Web MS.</h5>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget sem vitae justo sollicitudin posuere. Proin commodo,
                  velit nec gravida ultricies, lectus neque tempor urna, nec fermentum magna justo id justo. Cras ac convallis lorem. Suspendisse potenti.
                   Ut sed risus vitae ipsum accumsan accumsan. Nunc euismod, massa ac porttitor feugiat, lorem augue aliquam nibh, sit amet rutrum magna purus ac lacus. 
@@ -69,17 +69,16 @@
                 <div class="cookies-rendimiento">
                     <div class="title-cookies-rendimiento">
                         <h5>Cookies de rendimiento y análisis: </h5>
-                       <i class="bi bi-caret-down-fill"></i>
+                       <i class="bi bi-caret-down-fill" id="caret" ></i>
                     </div>
                    
-                    <label for="toogle">
-                         <input type="radio" name="" id="">
+                    <label id="label">
+                         <input type="checkbox" name="" id="">
+                         <span class="slider-input" ></span>
                     </label>
                    
                 </div>
-
-                 
-                    <div class="text-rendimiento">
+                    <div class="text-rendimiento" id="removeText" >
                         <h5>FB Pixel y Google Tag Manager</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam totam iusto dolorum maiores ea blanditiis, 
                             harum vero distinctio repellendus sit praesentium accusamus dolore minus earum fugiat illo ullam sed alias.</p>
@@ -89,22 +88,38 @@
                     <div class="uso-cookies">
                         <h5>Uso de Cookies en el Portal Web MS.</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsa asperiores iste quae ullam? Sed explicabo fugiat optio animi sint possimus,
-                             sapiente officia corrupti. Atque excepturi ab similique fugiat veritatis?
+                        sapiente officia corrupti. Atque excepturi ab similique fugiat veritatis?
                         Consequatur ex, delectus sunt placeat quisquam illum commodi aut. Aspernatur commodi itaque quisquam cumque doloremque nulla numquam eum asperiores 
                         unde quam accusantium deleniti sint iure velit blanditiis, ab excepturi? Rem.
                         Quis placeat laudantium quidem iusto maxime veritatis tempore illum. Dicta tempore ratione laborum, earum necessitatibus pariatur dolor. Dignissimos
-                         quisquam beatae deleniti incidunt eius necessitatibus mollitia eum optio reprehenderit, animi perferendis?
+                         quisquam beatae deleniti incidunt eius necessitatibus mollitia eum optio reprehenderit, animi perferendis? </p>
                             
+                    <p>
                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus quis amet soluta! Cum nisi harum, est laborum, laboriosam obcaecati tenetur
                           similique accusamus eaque repellat sed corrupti at cupiditate repudiandae?Voluptas error quia similique suscipit impedit quidem necessitatibus cum id cupiditate 
-                          placeat evenie itaque illum exercitationem officia repellat autem repellendus ab est quas, animi sapiente adipisci provident doloremque voluptatum. Velit?
+                          placeat evenie itaque illum exercitationem officia repellat autem repellendus ab est quas, animi sapiente adipisci provident doloremque voluptatum. Velit? </p>
 
-                        </p>
                     </div>
 
+
+
+
+        </div>
+
+        <div class="btn-configuracion-cookies">
+
+            <div class="sectio-btn">
+
+                <button type="button" class="btn-rechazar" >Rechazar</button>
+                <button type="button" class="btn-first" >Aceptar</button>
+
+            </div>
+
         </div>
 
         </div>
+
+       
 
      </aside>
 
@@ -125,7 +140,7 @@
 
             <div class="form">
 
-                <form bindsubmit="" class="form-banner">
+                <form bindsubmit="" method="post" class="form-banner">
 
                      <h3>Déjanos tu correo y optimiza tus reuniones</h3>
                     <div class="input-empresa">
@@ -143,10 +158,14 @@
                     </div>
                     <div class="message-optimizar"></div>
                 </form>
-
+                
+                <div class="message-form"></div>
             </div>
 
+         
         </div>
+                      
+           
         </div>
 
         <div class="aboutUs">
