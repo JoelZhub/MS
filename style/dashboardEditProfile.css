@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #000000;
+    list-style: none;
+    text-decoration: none;
+    
+}
+.dashboardProfile{
+
+    display: grid;
+    grid-template-columns: repeat(324,1fr);
+    align-items: center;
+    max-width: 100%;
+    gap: 30px;
+    height: 100vh;
+
+}
+
+.dashboardProfile .menu{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #161C25;
+    width: 324px;
+    height: 100vh;
+    color: #fff;
+
+}
+
+.dashboardProfile .menu .infoUser{
+    margin-top: 20px;
+    height: 272px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+
+}.dashboardProfile .menu .infoUser img{
+    width: 180px;
+    height: 180px;
+
+    
+}
+.dashboardProfile .menu .infoUser h2{
+    color: #ffff;
+    margin-top: 15px;
+    font-size: 28px;
+}
+
+.dashboardProfile .menu ul{
+    
+    padding: 0;
+    display: grid;
+    gap: 30px;
+   flex-direction: column;
+
+}
+
+.dashboardProfile .menu ul li{
+
+    color: #ffffff;
+    background-color: rgb(49, 104, 83, 51%);
+    display: flex;
+    height: 45px;
+    cursor: pointer;
+    font-weight: normal;
+    padding: 8px 4px 8px 10px;
+    width: 324px;
+    justify-content: space-between;
+    text-align: left;
+}
+.dashboardProfile .menu ul li.active{
+    background-color: rgb(49, 104, 83, 85%);
+}
+.dashboardProfile .menu ul li i{
+    color: #fff;
+    font-weight: 700;
+    font-size:20px ;
+}
+
+.dashboardProfile .panel-derecho {
+   display: flex;
+   flex-direction: column;   
+   width: 1150px;
+   
+}
+.panel-derecho .navegacion {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.panel-derecho .navegacion .navBuscadorIcons{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+}
+.panel-derecho .navegacion .navBuscadorIcons .icons{
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.panel-derecho .navegacion .navBuscadorIcons .search{
+    width: 300px;
+    position: relative;
+}
+.panel-derecho .navegacion .navBuscadorIcons .search input{
+    width: 278px;
+    outline: none;
+    height: 32px;
+    border: 1px solid;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 8px 10px 8px 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+
+}.panel-derecho .navegacion .navBuscadorIcons .search input::placeholder{
+    font-size: 15px;
+}
+.panel-derecho .navegacion .navBuscadorIcons .search .searchIcon{
+   top: 50%;
+   right: 40px;
+   transform: translateY(-50%);
+   position: absolute;
+    font-weight: bold;
+    color: #161C25;
+   cursor: pointer;
+
+}
+
+.panel-derecho .navegacion .navBuscadorIcons .icons i{
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.panel-derecho .navegacion .navBuscadorIcons .icons i:first-child{
+    border-radius: 50%;
+    background-color: #161C25;
+    color: #fff;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+}
+.dashboardProfile .contenedor-inputs{
+    width: 100%;
+}
+.dashboardProfile .contenedor-inputs h3{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dashboardProfile .contenedor-inputs .group1{
+   
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.dashboardProfile .contenedor-inputs .group1 h5{
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.dashboardProfile .contenedor-inputs .group1 input{
+    width: 397.8px;
+    border-radius: 6px;
+    height: 43px;
+    font-size: 14px;
+    padding: 8px 10px 8px 10px;
+    outline: none;
+    border: 1px solid #000;
+}
+.dashboardProfile .contenedor-inputs .group1 .input-p{
+    display: flex;
+    flex-direction: column;
+}
+.dashboardProfile .contenedor-inputs .group1 input.error{
+    border: 1px solid red;
+}
+
+.dashboardProfile .contenedor-inputs .error-small{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: red;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+.dashboardProfile .contenedor-inputs .group1 .btnOptions{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    gap: 20px;
+
+}
+.dashboardProfile .contenedor-inputs .group1 .btnOptions button{
+    width: 194px;
+    cursor: pointer;
+    height: 52px;
+    border-radius: 12px;
+    background-color: rgb(49, 104, 83, 85%);
+    color: #fff;
+    border: none;
+}
+.dashboardProfile .contenedor-inputs .group1 .btnOptions .save{
+    background-color: #1E1E1E;
+}
