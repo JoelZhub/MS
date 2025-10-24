@@ -257,16 +257,22 @@ function passwordValido(password){
 }   
 
 registrarse.addEventListener("click", () => {
-
-  
-
     if(validarEmail(email.value) && validarPhone(phone.value) && passwordValido(password.value)){
-
-        window.location.href = "dahshboardHome.html";
-
-
+        const user = email.value.trim();
+        localStorage.setItem("username", user);
+        window.location.href = "dahsboardHome.html";
+    }else{
+        if(!validarEmail(email.value)){
+            email.classList.add("error-input");
+        }
+        if(!validarPhone(phone.value)){
+             phone.classList.add("error-input");
+        }
+        if(!passwordValido(password.value)){
+             password.classList.add("error-input");
+        }
+        message.textContent = "Datos invalidos";
     }
-
 
 });
 
