@@ -38,7 +38,7 @@ email.addEventListener("input", () =>{
     if(!validarEmail(email.value)){
 
         email.classList.add("error-input");
-         message.textContent = "Ingrese un email invalido";
+         message.textContent = "Ingrese un email valido";
     }else{
         email.classList.remove("error-input")
          message.textContent = "";
