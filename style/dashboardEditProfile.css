@@ -19,8 +19,6 @@
     align-items: center;
     max-width: 100%;
     gap: 30px;
-    height: 100vh;
-
 }
 
 .dashboardProfile .menu{
@@ -81,6 +79,11 @@
 }
 .dashboardProfile .menu ul li.active{
     background-color: rgb(49, 104, 83, 85%);
+}
+.dashboardProfile .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+      font-weight: normal;
 }
 .dashboardProfile .menu ul li i{
     color: #fff;
@@ -195,8 +198,6 @@
     font-size: 16px;
     letter-spacing: 0.5px;
     color: red;
-    margin-top: 4px;
-    margin-bottom: 8px;
 }
 .dashboardProfile .contenedor-inputs .group1 .btnOptions{
     margin-top: 40px;

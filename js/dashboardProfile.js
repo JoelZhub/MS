@@ -1,6 +1,13 @@
-
-
 document.addEventListener("DOMContentLoaded", () =>{
+
+const nameUser = document.querySelector("#nameUser");
+
+
+if(nameUser){
+    const username = localStorage.getItem("username");
+    nameUser.textContent = username;
+}
+
 
 const saveBtn = document.querySelector("#saveBtn");
 
@@ -36,7 +43,6 @@ const mgsApellidoPersonal = document.querySelector("#messageApellidoPersonal");
 const mgsTelefonoPersonal = document.querySelector("#messageTelefonoPersonal");
 
 const mgsNombreEmpresa = document.querySelector("#messageNombreEmpresa");
-
 
 
 //valodar Emails 
@@ -147,7 +153,7 @@ telefono.addEventListener("input", () => {
 
     if(!validarTelefono(telefono.value)) {
          telefono.classList.add("error");
-        mgsTelefonoPersonal.textContent = "Ingrese un telefono valido";
+        mgsTelefonoPersonal.textContent = "Ingrese un telefono valido (10 digitos sin guiones)";
     }else{
         telefono.classList.remove("error");
         mgsTelefonoPersonal.textContent = "";
@@ -159,7 +165,7 @@ rnc.addEventListener("input", () => {
 
     if(!validarRNC(rnc.value)){
          rnc.classList.add("error");
-        mgsRNC.textContent = "Ingrese un RNC valido";
+        mgsRNC.textContent = "Ingrese un RNC valido (9 digitos sin guiones)";
     }else{
          rnc.classList.remove("error");
             mgsRNC.textContent = "";
@@ -180,57 +186,38 @@ function validarRNC(rnc){
 
 let campos = [
 
-
     {input: nombre, validator: validarNombre, msg: mgsNombrePersonal, errorMsg: "Ingrese un nombre personal valido"},
-    {input: apellido,  validator: validarApellido, msg: mgsApellidoPersonal, errorMsg: "Ingrese un apellido valido"},
+    {input: apellido,  validator: validarNombre, msg: mgsApellidoPersonal, errorMsg: "Ingrese un apellido valido"},
     {input: email, validator: validarEmail, msg: mgsEmailPersonal, errorMsg: "Ingrese un email personal valido"},
-    {input: telefono, validator: validarTelefono, msg: mgsTelefonoPersonal, errorMsg: "Ingrese un telefono valido"},
-    {input: nombreEmpresa, validator: validarNombre, msg: mgsNombreEmpresa, }
-
+    {input: telefono, validator: validarTelefono, msg: mgsTelefonoPersonal, errorMsg: "Ingrese un telefono valido (10 digitos sin guiones)"},
+    {input: nombreEmpresa, validator: validarNombre, msg: mgsNombreEmpresa, errorMsg: "Ingrese un nombre empresarial valido"},
+    {input:emailEmpresa, validator: validarEmail, msg: mgsEmailEmpresa, errorMsg: "Ingrese un email empresarial valido"},
+    {input: rnc, validator: validarRNC, msg: mgsRNC, errorMsg: "Ingrese un RNC valido (9 digitos sin guiones)"}
 ];
 
 saveBtn.addEventListener("click", () => {
 
+    let formValido = true;
 
-    if(nombre.value && apellido.value && email.value 
-        && telefono.value && nombreEmpresa.value && rnc.value && email.value){
+    campos.forEach(campo => {
 
+        campo.input.classList.remove("error");
+        campo.msg.textContent = "";
 
+        if(!campo.input.value || !campo.validator(campo.input.value)){
+            campo.input.classList.add("error");
+            campo.msg.textContent = campo.errorMsg;
+
+            formValido = false;
+        }
+
+    });
+
+    if(formValido){
+        
 
     }
-    else{
-
-        if(!validarNombre(nombre.value)){
-             nombre.classList.add("error");
-             mgsNombrePersonal.textContent = "Ingrese un nombre personal valido";
-            }
-        else if(!validarEmail(email.value)){
-                
-                email.classList.add("error");
-                mgsEmailPersonal.textContent = "Ingrese un email personal valido";
-         }
-          else if(!validarNombre(apellido.value)){
-             apellido.classList.add("error");
-            mgsApellidoPersonal.textContent = "Ingrese un appelido valido";
-        }
-          else if(!validarTelefono(telefono.value)){
-            telefono.classList.add("error");
-            mgsTelefonoPersonal.textContent = "Ingrese un telefono valido";
-        }
-        else if(!validarNombre(nombreEmpresa.value)){
-            nombreEmpresa.classList.add("error");
-            mgsNombreEmpresa.textContent = "Ingrese un nombre empresarial valido";
-        }
-       
-       else  if(!validarRNC(rnc.value)){
-              rnc.classList.add("error");
-                mgsRNC.textContent = "Ingrese un RNC valido";
-        }
-        else if(!validarEmail(emailEmpresa.value)){
-             emailEmpresa.classList.add("error");
-             mgsEmailEmpresa.textContent = "Ingrese un email empresarial valido";
-        }
-    }
+   
 
 });
 

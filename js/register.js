@@ -275,6 +275,4 @@ registrarse.addEventListener("click", () => {
     }
 
 });
-
-
 });
