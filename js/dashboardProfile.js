@@ -207,13 +207,13 @@ saveBtn.addEventListener("click", () => {
         if(!campo.input.value || !campo.validator(campo.input.value)){
             campo.input.classList.add("error");
             campo.msg.textContent = campo.errorMsg;
-
             formValido = false;
         }
 
     });
 
     if(formValido){
+
         
 
     }
