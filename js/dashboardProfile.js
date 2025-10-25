@@ -1,6 +1,7 @@
+import {Leader} from '../js/loader.js';
 document.addEventListener("DOMContentLoaded", () =>{
 
-const nameUser = document.querySelector("#nameUser");
+const nameUser = document.querySelector("#nameUser");   
 
 
 if(nameUser){
@@ -195,8 +196,9 @@ let campos = [
     {input: rnc, validator: validarRNC, msg: mgsRNC, errorMsg: "Ingrese un RNC valido (9 digitos sin guiones)"}
 ];
 
-saveBtn.addEventListener("click", () => {
+saveBtn.addEventListener("click", (e) => {
 
+    e.preventDefault();
     let formValido = true;
 
     campos.forEach(campo => {
@@ -213,9 +215,10 @@ saveBtn.addEventListener("click", () => {
     });
 
     if(formValido){
-
-        
-
+            Leader.show(2000, "Datos guardados correctamente", () => {
+                window.location.href = 'dahsboardHome.html';
+            });
+            
     }
    
 
