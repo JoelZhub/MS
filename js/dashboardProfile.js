@@ -46,37 +46,6 @@ const mgsTelefonoPersonal = document.querySelector("#messageTelefonoPersonal");
 const mgsNombreEmpresa = document.querySelector("#messageNombreEmpresa");
 
 
-//valodar Emails 
-email.addEventListener("input", () => {
-
-     if(!validarEmail(email.value)){
-
-        email.classList.add("error");
-        mgsEmailPersonal.textContent = "Ingrese un email personal valido";
-
-    }else{
-            email.classList.remove("error");
-            mgsEmailPersonal.textContent = ""
-    }
-
-
-});
-
-emailEmpresa.addEventListener("input", () => {
-
-     if(!validarEmail(emailEmpresa.value)){
-
-        emailEmpresa.classList.add("error");
-        mgsEmailEmpresa.textContent = "Ingrese un email empresarial valido";
-
-    }else{
-            emailEmpresa.classList.remove("error");
-            mgsEmailEmpresa.textContent = ""
-    }
-
-
-});
-
 function validarEmail(email){
 
     email = email.trim().toLowerCase();
@@ -98,82 +67,14 @@ function validarEmail(email){
 
     return true;
 }
-// validar campos de textContent
 
-nombre.addEventListener("input", () => {
-
-    if(!validarNombre(nombre.value)){
-
-        nombre.classList.add("error");
-        mgsNombrePersonal.textContent = "Ingrese un nombre personal valido";
-    }else{
-        nombre.classList.remove("error");
-        mgsNombrePersonal.textContent = "";
-    }
-
-
-});
-
-nombreEmpresa.addEventListener("input", () => {
-
-    if(!validarNombre(nombreEmpresa.value)){
-
-        nombreEmpresa.classList.add("error");
-        mgsNombreEmpresa.textContent = "Ingrese un nombre empresarial valido";
-    }else{
-        nombreEmpresa.classList.remove("error");
-        mgsNombreEmpresa.textContent = "";
-    }
-
-
-});
-
-apellido.addEventListener("input", () => {
-
-    if(!validarNombre(apellido.value)){
-
-        apellido.classList.add("error");
-        mgsApellidoPersonal.textContent = "Ingrese un appelido valido";
-    }else{
-        apellido.classList.remove("error");
-        mgsApellidoPersonal.textContent = "";
-    }
-
-
-});
 function validarNombre(nombre){
 
     const caracter = [...nombre].some(c => /[^a-zA-Z]/.test(c));
 
-    if(caracter || nombre === "") return false;
+    if(caracter || nombre === "" || nombre.length < 2) return false;
     return true;
 }
-//validar campos numericos
-
-telefono.addEventListener("input", () => {
-
-    if(!validarTelefono(telefono.value)) {
-         telefono.classList.add("error");
-        mgsTelefonoPersonal.textContent = "Ingrese un telefono valido (10 digitos sin guiones)";
-    }else{
-        telefono.classList.remove("error");
-        mgsTelefonoPersonal.textContent = "";
-    }
-
-});
-
-rnc.addEventListener("input", () => {
-
-    if(!validarRNC(rnc.value)){
-         rnc.classList.add("error");
-        mgsRNC.textContent = "Ingrese un RNC valido (9 digitos sin guiones)";
-    }else{
-         rnc.classList.remove("error");
-            mgsRNC.textContent = "";
-    }
-
-
-});
 
 function validarTelefono(telefono){
     if(telefono.length > 10 || telefono.length < 10 || isNaN(telefono)) return false;
@@ -195,6 +96,25 @@ let campos = [
     {input:emailEmpresa, validator: validarEmail, msg: mgsEmailEmpresa, errorMsg: "Ingrese un email empresarial valido"},
     {input: rnc, validator: validarRNC, msg: mgsRNC, errorMsg: "Ingrese un RNC valido (9 digitos sin guiones)"}
 ];
+
+//validar entrada de inputs 
+
+
+campos.forEach(campo => {
+
+    campo.input.addEventListener("input", () => {
+
+         campo.input.classList.remove("error");
+         campo.msg.textContent = "";
+        if(!campo.validator(campo.input.value)){
+            campo.input.classList.add("error");
+            campo.msg.textContent = campo.errorMsg;
+        }
+    });
+  
+
+});
+
 
 saveBtn.addEventListener("click", (e) => {
 
