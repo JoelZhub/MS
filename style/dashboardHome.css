@@ -245,7 +245,13 @@
 }
 .contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .grafico-lineas i{
     font-size: 200px;
+    color: #000;
 
+}.contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .grafico-lineas i.participante{
+    color: #2B6853;
+}
+.contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .grafico-lineas i.asistencia{
+    color:#434A54;
 }
 .contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .scroll-vertical{
     display:flex;
