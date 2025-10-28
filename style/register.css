@@ -64,7 +64,7 @@
 .text-form .text h3{
 
         font-size: 40px;
-        width: 600px;
+        width: 100%;
         font-weight: 400;
         margin-bottom: 20px;
 
@@ -81,13 +81,13 @@
     font-weight: normal;
     text-align: left;
     padding-left: 12px;
-    font-size: 18px;  
-    margin-bottom: 8px;  
-}
+    font-size: 19px;  
+} 
 
 
-.contenido .signIn{
+/* form register */
 
+.contenido .register{
     background-color: #fff;
     border-radius: 25px;
     width: 511px;
@@ -96,22 +96,20 @@
   
 
 }
-.contenido .signIn h3{
+.contenido .register h3{
 
     text-align: center;
     font-size: 40px;
     font-weight: bold;
+    color: #000;
     margin-top: 80px;
     margin-bottom: 60px;
 }
 
- .contenedor .contenido .signIn .inputs .email input.error-input{
-     border-bottom: 1px solid red;
-}
- .contenedor .contenido .signIn .inputs .password input.error-input{
-     border-bottom: 1px solid red;
-}
-.contenido .signIn .inputs .email{
+
+
+/* inputs */
+.contenido .register .inputs  .layout-inputs{
 
     width: 100%;
     display: flex;
@@ -122,11 +120,11 @@
     color: #000;
 }
 
-.contenido .signIn .inputs .email h5{
+.contenido .register .inputs  .layout-inputs h5{
     font-size: 22px;
     font-weight: 600;
 }
-.contenido .signIn .inputs .email input{
+.contenido .register .inputs  .layout-inputs input{
     width: 300px;
     height: 20px;
     border: none;
@@ -138,47 +136,11 @@
     color: #000;
     font-size: 20px;
 }
-.contenido .signIn .inputs .email .email-icon{
-
-    color: #000;
-    top: -4px;
-    font-weight: 600;
-    font-size: 22px;
-    position: absolute;
-    right:  20px;
-    animation:myAnimation 480ms;
-    transition: 3ms ease;
-    cursor: pointer;
-
+.contenido .register .inputs  .layout-inputs input::placeholder{
+   color: #161C25;
+   padding-bottom: 8px;
 }
-
-
-.contenido .signIn .inputs .password{
-
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 18px;
-    height: auto;
-    color: #000;
-    margin-bottom: 20px;
-}
-
-.contenido .signIn .inputs .password input{
-    width: 300px;
-    height: 20px;
-    border: none;
-    position: relative;
-    border-bottom: 1px solid #161C25;
-    background-color: transparent;
-    outline:none ;
-    padding: 4px;
-    color: #000;
-    font-size: 20px;
-}
-
-.contenido .signIn .inputs .password #eye-icon{
-
+.contenido .register .inputs .layout-inputs .mostrar{
     color: #000;
     top: -5px;
     font-weight: 600;
@@ -190,24 +152,49 @@
     transition: 3ms ease;
 }
 
-.contenido .signIn .inputs  .ocultar{
+/* ocultar .secondBloque */
+
+.contenido .register .inputs .ocultarBloque{
+    display: none;
+}
+
+/* mostrar  bloque */
+.contenido .register .inputs .mostrarBloque{
+    display: block;
+}
+
+
+/* message error inputs */
+ .contenedor .contenido .register .inputs .layout-inputs input.error-input{
+     border-bottom: 1px solid red;
+}
+
+.contenido .register .inputs  .ocultar{
  display: none;
 }
-.contenido .signIn .inputs .password h5{
-    font-size: 22px;
-    font-weight: 600;
-}
-.contenido .signIn .inputs .btns{
+
+/* btns */
+.contenido .register .inputs .btns{
 
     display: grid;
     flex-direction: column-reverse;
     justify-content: center;
     width: 100%;
-    height: 90px;
+    height: auto;
 
 }
 
-.contenido .signIn .inputs .btns button{
+.contenido .register .inputs .btns .registro-btns .show{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.contenido .register .inputs .btns .ocultar-btn{
+    display: none;
+}
+
+.contenido .register .inputs .btns button{
     
     width: 200px;
     height: 40px;
@@ -215,7 +202,7 @@
     color: #000;
 
 }
-.contenido .signIn .inputs .btns .btn-ingreso{
+.contenido .register .inputs .btns .btn-ingreso{
 
     background-color: #2B6853;
     border: none;
@@ -226,13 +213,13 @@
     font-weight: bold;
     
 }
-.contenido .signIn .inputs .btns .btn-ingreso:hover{
+.contenido .register .inputs .btns .btn-ingreso:hover{
     opacity: 0.9;
     transition: 3ms all ease;
 
 }
 
-.contenido .signIn .inputs .btns img{
+.contenido .register .inputs .btns img{
 
    
     left: 165px;
@@ -241,7 +228,7 @@
    
 }
 
-.contenido .signIn .inputs .btns .google-btn{
+.contenido .register .inputs .btns .google-btn{
 
     border-radius: 4px;
     color: #2B6853;
@@ -250,7 +237,8 @@
     border: 1px solid #000;
     font-weight: bold;
 }
-.contenedor .signIn .inputs .forgot-password{
+
+.contenedor .register .inputs .continue-login{
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -261,17 +249,17 @@
    
    
 }
-.contenedor .signIn .inputs .forgot-password a{
+.contenedor .register .inputs .continue-login a{
     color: #000;
     font-weight:100;
     text-decoration: none;
   
 }
-.contenedor .signIn .inputs .forgot-password p{
+.contenedor .register .inputs .continue-login p{
     
     color: #000;
 }
-.contenedor .signIn .inputs .forgot-password p a{
+.contenedor .register .inputs .continue-login p a{
     font-weight: 500;
     color: #000;
 }
