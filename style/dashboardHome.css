@@ -193,6 +193,94 @@
     border-radius: 22px;
     box-shadow: 0.8px 1px 0.9px 1px #2B6853;
 }
+
+.contenedor .cards .card .estadisticas .contenido{
+    position: relative;
+    overflow: hidden;
+    padding-top:10px;
+    padding-left: 10px;
+    width: 100%;
+}
+.contenedor .cards .card .estadisticas .contenido .grafico-header{
+    margin-bottom: 10px;
+}
+.contenedor .cards .card .estadisticas .contenido .grafico-header .element-activo{
+    background-color: #161C25;
+    font-size: 0.9em;
+    padding: 4px 12px;
+    color: #ffff;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.contenedor .cards .card .estadisticas .contenido  .grafico-main{
+    width: 100%;
+    display: grid;
+    height: calc(100% - 70px) ;
+    grid-template-columns: 85px 1fr;
+}
+.contenedor .cards .card .estadisticas .contenido .grafico-main .eje-y{
+    display: flex;
+      font-size: 0.9em;
+      flex-direction: column;
+      line-height: 1.8;
+      padding-bottom: 15px;
+      padding-right: 10px;
+      justify-content: space-between;
+}
+.contenedor .cards .card .estadisticas .contenido .grafico-main .eje-y span{
+    cursor: pointer;
+}
+.contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper{
+    display: flex;
+    height: 100%;
+    padding-left: 50px;
+}
+.contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .grafico-lineas{
+    flex-grow: 1;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .grafico-lineas i{
+    font-size: 200px;
+    color: #000;
+
+}.contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .grafico-lineas i.participante{
+    color: #2B6853;
+}
+.contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .grafico-lineas i.asistencia{
+    color:#434A54;
+}
+.contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .scroll-vertical{
+    display:flex;
+    width: 30px;
+   
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+.contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .scroll-vertical .scroll-barra{
+    width: 8px;
+    height: 37px;
+      background-color: #434A54;    
+    border-radius: 8px;
+}
+.contenedor .cards .card .estadisticas  .scroll-horizontal{
+    display: flex;
+    align-items: center;
+    gap: 30px;      
+    justify-content: center;
+
+
+}.contenedor .cards .card .estadisticas .scroll-horizontal .scroll-barra{
+    width: 45px;
+    height: 8px;
+    background-color: #434A54;
+    border-radius: 8px;
+}
 .contenedor .cards .card .btnsEstadisticas{
     display: flex;
     gap: 40px;
@@ -274,21 +362,60 @@
 
 .contenedor .bannerReuniones{
     margin-top: 140px;
-}
-.contenedor .bannerReuniones  .boxReunion{
-
     width: 100%;
-    border-radius: 9px;
-    box-shadow: 0.9px 0.4px #000;
-    border-right: 2px solid #000;
-    border-bottom: 0.5px solid #000;
-    background-color: #ffffff;
-    height: 260px;
+   
 }
 .contenedor .bannerReuniones  h3{
 
     color: #434A54;
     font-weight: normal;
     font-size: 23px;
+    margin-bottom: 20px;
 }
 
+.contenedor .bannerReuniones  .boxReunion{
+
+    width: 100%;
+    border-radius: 9px;
+    box-shadow: 0.9px 0.9px 0.8px 0.8px #000;
+    background-color: #ffffff;
+    height: 260px;
+    position: relative;
+
+}
+
+.contenedor .bannerReuniones .boxReunion .scroll{
+    position: absolute;
+    width: 8px;
+    right: 50px;
+    cursor: pointer;
+    top: 30%;
+    transform: translateY(-30%);
+    border-radius: 6px;
+    background-color: #434A54;
+    height: 190px;
+}
+
+.contenedor .bannerReuniones .boxReunion .listReuniones{
+    width: 90%;
+    font-size: 16px;
+   text-align: left;
+}
+
+.contenedor .bannerReuniones .boxReunion .listReuniones td{
+        padding:15px 15px;
+
+}   
+.contenedor .bannerReuniones .boxReunion .listReuniones i{
+    background-color: #2B6853;
+    color: #ffff;
+    font-weight: bold;
+    padding: 5px;
+    width: 60px;
+    cursor: pointer;
+    height: 60px;
+    border-radius: 50%;
+}
+.contenedor .bannerReuniones .boxReunion .listReuniones .trash{
+    background-color: red;
+}
