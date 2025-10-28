@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #000000;
+    list-style: none;
+    text-decoration: none;
+    
+}
+.dashboard{
+
+    display: grid;
+    grid-template-columns: repeat(324,1fr);
+    align-items: flex-start;
+    max-width: 100%;
+    gap: 30px;
+}
+
+.dashboard .menu{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #161C25;
+    width: 324px;
+    height: 1000px;
+    color: #fff;
+
+}
+
+.dashboard .menu .infoUser{
+    margin-top: 20px;
+    height: 272px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+
+}.dashboard .menu .infoUser img{
+    width: 180px;
+    height: 180px;
+
+    
+}
+.dashboard .menu .infoUser h2{
+    color: #ffff;
+    margin-top: 15px;
+    font-size: 28px;
+}
+
+.dashboard .menu ul{
+    
+    padding: 0;
+    display: grid;
+    gap: 30px;
+   flex-direction: column;
+
+}
+
+.dashboard .menu ul li{
+
+    color: #ffffff;
+    background-color: rgb(49, 104, 83, 51%);
+    display: flex;
+    height: 45px;
+    cursor: pointer;
+    font-weight: normal;
+    padding: 8px 4px 8px 10px;
+    width: 324px;
+    justify-content: space-between;
+    text-align: left;
+}
+.dashboard .menu ul li.active{
+    background-color: rgb(49, 104, 83, 85%);
+}
+.dashboard .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+      font-weight: normal;
+}
+.dashboard .menu ul li i{
+    color: #fff;
+    font-weight: 700;
+    font-size:20px ;
+}
+
+.dashboard .panel-derecho {
+   display: flex;
+   flex-direction: column;   
+   width: 1150px;
+    padding-top: 40px;
+   
+}
+.panel-derecho .navegacion {
+    display:flex;
+    align-items: center;    
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.panel-derecho .navegacion .navBuscadorIcons{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+}
+.panel-derecho .navegacion .navBuscadorIcons .icons{
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.panel-derecho .navegacion .navBuscadorIcons .search{
+    width: 300px;
+    position: relative;
+}
+.panel-derecho .navegacion .navBuscadorIcons .search input{
+    width: 278px;
+    outline: none;
+    height: 32px;
+    border: 1px solid;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 8px 10px 8px 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+
+}.panel-derecho .navegacion .navBuscadorIcons .search input::placeholder{
+    font-size: 15px;
+}
+.panel-derecho .navegacion .navBuscadorIcons .search .searchIcon{
+   top: 50%;
+   right: 40px;
+   transform: translateY(-50%);
+   position: absolute;
+    font-weight: bold;
+    color: #161C25;
+   cursor: pointer;
+
+}
+
+.panel-derecho .navegacion .navBuscadorIcons .icons i{
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.panel-derecho .navegacion .navBuscadorIcons .icons i:first-child{
+    border-radius: 50%;
+    background-color: #161C25;
+    color: #fff;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+}
+
+.contenedor {
+    width: 100%;
+    height: 500px;
+    background-color: transparent;
+}
+.contenedor .cards{
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    margin-bottom: 50px;
+    align-items: stretch;
+    background-color: #fff;
+}
+.contenedor .cards .card{
+    border: none;
+    display: grid;
+    height: 381px;
+    width: 495px;
+    gap: 20px;
+    background-color: #ffff;
+}
+.contenedor .cards .card  h3{
+    font-weight: normal;
+    font-size: 23px;
+    align-items: center;
+}
+.contenedor .cards .card .estadisticas{
+     background-color: #ffff;
+     width: 100%;
+     padding: 8px 4px 7px 8px;
+     height: 381px;
+    border-radius: 22px;
+    box-shadow: 0.8px 1px 0.9px 1px #2B6853;
+}
+.contenedor .cards .card .btnsEstadisticas{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor .cards .card .btnsEstadisticas button{
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(30, 30, 30, 0.78);
+    color: #fff;
+    width: 124px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.contenedor .cards .card .btnsEstadisticas button.active{
+    background-color: #161C25;
+}
+.contenedor .cards .card .eventos{
+    background-color: #ffffff;
+    height: 381px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 22px;
+    padding: 10px;
+    box-shadow: 0.8px 1px 0.9px 1px #2B6853;
+}
+
+ .contenedor .cards .card .eventos .listEvenst{
+    width: 100%;
+    text-align: left;
+    font-size: 13px;
+
+} .contenedor .cards .card .eventos .listEvenst th{
+    font-size: 16px;
+    font-weight: 600;
+    
+}
+ .contenedor .cards .card .eventos .listEvenst th, td{
+    padding: 10px 10px;
+ }
+.contenedor .cards .card .eventos .contenido{
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.contenedor .cards .card .eventos .btnListEvents{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+.contenedor .cards .card .eventos .btnListEvents button{
+    width: 130px;
+    height: 30px;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    background-color: rgba(43, 104, 83, 0.85);
+    border-radius: 10px;
+}
+.contenedor .cards .card .eventos .btnListEvents button.active{
+
+    background-color: #2B6853;
+}
+.contenedor .cards .card .eventos .contenido .scroll{
+    position: absolute;
+    width: 5px;
+    right: 0;
+    cursor: pointer;
+    top: 35%;
+    transform: translateY(-35%);
+    border-radius: 6px;
+    background-color: #434A54;
+    height: 120px;
+}
+
+
+.contenedor .bannerReuniones{
+    margin-top: 140px;
+}
+.contenedor .bannerReuniones  .boxReunion{
+
+    width: 100%;
+    border-radius: 9px;
+    box-shadow: 0.9px 0.4px #000;
+    border-right: 2px solid #000;
+    border-bottom: 0.5px solid #000;
+    background-color: #ffffff;
+    height: 260px;
+}
+.contenedor .bannerReuniones  h3{
+
+    color: #434A54;
+    font-weight: normal;
+    font-size: 23px;
+}
+
