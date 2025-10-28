@@ -60,7 +60,55 @@
                         <h3>Revisa las estadísticas de tus ultimas reuniones  </h3>
                         <div class="estadisticas">
 
-                                <ul></ul>
+                               <div class="contenido">
+
+                                        <div class="grafico-header">
+                                                <span  class="element-activo">Enero</span>
+                                        </div>
+                                        
+                                        <div class="grafico-main">
+                                                <div class="eje-y">
+                                                        <span id="element">Febrero</span>
+                                                        <span id="element">Marzo</span>
+                                                        <span id="element">Abril</span>
+                                                        <span id="element">Mayo</span>
+                                                        <span id="element">Junio</span>
+                                                        <span id="element">Julio</span>
+                                                        <span id="element">Agosto</span>
+                                                        <span id="element">Octubre</span>
+                                                        <span id="element">Septiembre</span>
+                                                        <span id="element">Diciembre</span>
+                                                        <span id="element">Noviembre</span>
+                                                </div>
+
+                                                <div class="area-grafico-wrapper">
+                                                        <div class="grafico-lineas">
+                                                                <i class="bi bi-bar-chart-line "></i>
+                                                        </div>
+
+                                                        <div class="scroll-vertical">
+                                                                <span class="scroll-barra"></span>
+                                                                <span class="scroll-barra"></span>
+                                                                <span class="scroll-barra"></span>
+                                                                <span class="scroll-barra"></span>
+                                                                <span class="scroll-barra"></span>
+                                                                <span class="scroll-barra"></span>
+                                                        </div>
+
+                                                </div>
+                                                
+                                        </div>
+                                
+                               </div>
+
+                               <div class="scroll-horizontal">
+                                <span class="scroll-barra"></span>
+                                <span class="scroll-barra"></span>
+                                <span class="scroll-barra"></span>
+                                <span class="scroll-barra"></span>
+                                <span class="scroll-barra"></span>
+                                <span class="scroll-barra"></span>
+                               </div>
 
                         </div>
 
@@ -162,22 +210,45 @@
 
                         <div class="boxReunion">
 
-                                <table id="listReuniones">
+                                <table id="listReuniones" class="listReuniones" >
 
                                         <tbody id="bodyReunionesList" >
-                                                
-                                                <tr>
+
+                                                <tr id="element">
                                                         <td>Taller 1</td>
                                                         <td>Salon de reuniones</td>
-                                                        <td></td>
-                                                        <td></td>
+                                                        <td>23/10/2025 02:00 PM</td>
+                                                        <td ><i class="bi bi-trash3-fill trash" id="eliminate"></i></td>
+                                                        <td><i class="bi bi-plus" id="add"></i></td>
                                                 </tr>
+                                                <tr id="element">
+                                                        <td>Taller 2</td>
+                                                        <td>Comedor 10:00AM</td>
+                                                        <td>23/10/2025 2:00 PM</td>
+                                                        <td ><i class="bi bi-trash3-fill trash" id="eliminate"></i></td>
+                                                        <td><i class="bi bi-plus" id="add"></i></td>
+                                                </tr>
+                                                <tr id="element">
+                                                        <td>Taller 3</td>
+                                                        <td>Departamento de ventas</td>
+                                                        <td>23/10/2025 04:00 PM</td>
+                                                        <td ><i class="bi bi-trash3-fill trash" id="eliminate"></i></td>
+                                                         <td><i class="bi bi-plus" id="add"></i></td>
+                                                </tr>
+                                                <tr id="element">
+                                                        <td>Taller 4</td>
+                                                        <td>Comedor</td>
+                                                        <td>23/10/2025 03:00 AM</td>
+                                                        <td ><i class="bi bi-trash3-fill trash" id="eliminate"></i></td>
+                                                        <td><i class="bi bi-plus" id="add"></i></td>
+                                                </tr>
+                                                
 
                                         </tbody>
 
                                 </table>
                                 
-
+                                
                         </div>
 
 
