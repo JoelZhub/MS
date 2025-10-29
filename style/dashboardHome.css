@@ -323,6 +323,8 @@
  .contenedor .cards .card .eventos .listEvenst th, td{
     padding: 10px 10px;
  }
+
+ 
 .contenedor .cards .card .eventos .contenido{
     height: 400px;
     width: 100%;
@@ -363,43 +365,53 @@
 .contenedor .bannerReuniones{
     margin-top: 140px;
     width: 100%;
+    padding: 10px;
+    position: relative;
+    border-radius: 9px;
+    box-shadow: 0.9px 0.9px 0.8px #000;
+    background-color: #ffffff;
+    height: 280px;
    
 }
 .contenedor .bannerReuniones  h3{
-
     color: #434A54;
     font-weight: normal;
     font-size: 23px;
-    margin-bottom: 20px;
+
 }
 
 .contenedor .bannerReuniones  .boxReunion{
 
     width: 100%;
-    border-radius: 9px;
-    box-shadow: 0.9px 0.9px 0.8px 0.8px #000;
-    background-color: #ffffff;
-    height: 260px;
+    height: 160px; 
     position: relative;
+    overflow: hidden;
 
 }
-
-.contenedor .bannerReuniones .boxReunion .scroll{
+.contenedor .bannerReuniones .boxReunion .scrollBox{
     position: absolute;
     width: 8px;
-    right: 50px;
+    right: 60px;
     cursor: pointer;
-    top: 30%;
-    transform: translateY(-30%);
+    top: 10px;
     border-radius: 6px;
     background-color: #434A54;
-    height: 190px;
+    /* height:190px; */
 }
+.contenedor .bannerReuniones .boxReunion .contentReunion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 
 .contenedor .bannerReuniones .boxReunion .listReuniones{
     width: 90%;
     font-size: 16px;
    text-align: left;
+    position: relative;
+
 }
 
 .contenedor .bannerReuniones .boxReunion .listReuniones td{
