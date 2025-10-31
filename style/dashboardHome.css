@@ -299,10 +299,13 @@
 .contenedor .cards .card .btnsEstadisticas button.active{
     background-color: #161C25;
 }
+
+/*  */
 .contenedor .cards .card .eventos{
     background-color: #ffffff;
     height: 381px;
     width: 100%;
+    position: relative;
     overflow: hidden;
     border-radius: 22px;
     padding: 10px;
@@ -317,48 +320,92 @@
 } .contenedor .cards .card .eventos .listEvenst th{
     font-size: 16px;
     font-weight: 600;
-    
 }
  .contenedor .cards .card .eventos .listEvenst th, td{
-    padding: 10px 10px;
- }
+    padding: 7px 8px;
 
- 
+ }
+.contenedor .cards .card .eventos .listEvenst .evento.active{
+    font-weight: 700;
+}
+.contenedor .cards .card .eventos .listEvenst .departamento.active{
+    font-weight: 700;
+}
+ .contenedor .cards .card .eventos .listEvenst .fecha.active{
+    font-weight: 700;
+}
 .contenedor .cards .card .eventos .contenido{
-    height: 400px;
+    min-height: 350px;
     width: 100%;
     position: relative;
+    overflow: hidden;
+
 }
 
-.contenedor .cards .card .eventos .btnListEvents{
-    display: flex;
-    margin-top: 30px;
-    justify-content: space-around;
-}
-.contenedor .cards .card .eventos .btnListEvents button{
-    width: 130px;
-    height: 30px;
-    color: #fff;
-    font-size: 15px;
-    border: none;
-    background-color: rgba(43, 104, 83, 0.85);
-    border-radius: 10px;
-}
-.contenedor .cards .card .eventos .btnListEvents button.active{
-
-    background-color: #2B6853;
-}
 .contenedor .cards .card .eventos .contenido .scroll{
     position: absolute;
     width: 5px;
     right: 0;
     cursor: pointer;
-    top: 35%;
-    transform: translateY(-35%);
+    top: 25%;
+    transform: translateY(-25%);
     border-radius: 6px;
     background-color: #434A54;
     height: 120px;
 }
+
+.contenedor .cards .card .newEvento{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 0;
+    right: 0;
+    color: #fff;
+    left: 0;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: #2B6853;
+    
+    transform: translateX(-100%);
+
+} 
+.contenedor .cards .card .newEvento .box{
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    flex-direction: column;
+}
+.contenedor .cards .card .newEvento .box h4{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+
+}
+.contenedor .cards .card .newEvento .box .group {
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    flex-direction: column;
+    
+}
+.contenedor .cards .card .newEvento .box .group .sectionInput label{
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+.contenedor .cards .card .newEvento .box .group .sectionInput input{
+    width: 100%;
+    font-size: 13px;
+    height: 30px;
+    outline: none;
+    border: none;
+    padding: 0.4px 0.7px 1px 0.8px;
+}
+.contenedor .cards .card .newEvento .box .group .sectionInput input::placeholder{
+    padding-left: 5px;
+}
+/*  */
 
 
 .contenedor .bannerReuniones{
@@ -395,7 +442,6 @@
     top: 10px;
     border-radius: 6px;
     background-color: #434A54;
-    /* height:190px; */
 }
 .contenedor .bannerReuniones .boxReunion .contentReunion{
     position: absolute;
@@ -429,4 +475,41 @@
 }
 .contenedor .bannerReuniones .boxReunion .listReuniones .trash{
     background-color: red;
+}
+
+
+/*  */
+/*  */
+.contenedor .cards .card .eventos .btnListEvents{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+.contenedor .cards .card .eventos .btnListEvents button{
+    width: 130px;
+    height: 30px;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    background-color: rgba(43, 104, 83, 0.85);
+    border-radius: 10px;
+}
+.contenedor .cards .card .eventos .btnListEvents button.active{
+
+    background-color: #2B6853;
+}
+.contenedor .cards .card  .agregarEvento{
+    width: 200px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #161C25;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+.contenedor .cards .card  .agregarEvento:hover{
+    filter: brightness(0.6);
+   
 }

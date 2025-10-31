@@ -26,7 +26,7 @@
                 <li  class="active"> <a href="dahsboardHome.html"> Dashboard </a>  <i class="bi bi-house"></i></li>
                 <li ><a href="dashboardEdiProfile.html"> Editar perfil  </a> <i class="bi bi-pencil-square"></i> </li>
                 <li> <a href="dashboardAgregarEmpleados.html">Agregar empleados </a>  <i class="bi bi-person-fill-add"></i> </li>
-                <li ><a href="dahsboardCrearEvento.html">Crear evento  </a>  <i class="bi bi-plus-circle"></i> </li>
+               
             </ul>
         </nav>
 
@@ -123,65 +123,54 @@
                  <div class="card ">
 
                         <h3>Eventos</h3>
-
-                        <div class="eventos">   
+                        <div class="eventos">  
 
                                 <div class="contenido">
 
-                                        <table class="listEvenst" id="eventos" >
+                                        <div class="contEvent">
 
-                                                <thead>
-                                                        <tr>
-                                                                <th>Eventos</th>
-                                                                <th>Lugar</th>
-                                                                <th>Fecha</th>
-                                                                <th>Participantes</th>
-                                                                <th>Estado</th>
-                                                        </tr>
-                                                </thead>
-
-                                                <tbody id="bodyEventList">
-
-                                                        <tr>
-                                                                        <td>Reunión</td>
-                                                                        <td>Comedor</td>
-                                                                        <td>12/08/2025</td>
-                                                                        <td>Dep. Contabilidad</td>
-                                                                        <td>Realizada</td>
-                                                         </tr>
+                                                <table class="listEvenst" id="eventos" >
+                                                        <thead>
                                                                 <tr>
-                                                                        <td>Reunión</td>
-                                                                        <td>Comedor</td>
-                                                                        <td>12/08/2025</td>
-                                                                        <td>Dep. Contabilidad</td>
-                                                                        <td>Realizada</td>
+                                                                        <th>Eventos</th>
+                                                                        <th>Lugar</th>
+                                                                        <th>Fecha</th>
+                                                                        <th>Participantes</th>
+                                                                        <th>Estado</th>
                                                                 </tr>
-
-                                                                 <tr>
-                                                                        <td>Reunión</td>
-                                                                        <td>Comedor</td>
-                                                                        <td>12/08/2025</td>
-                                                                        <td>Dep. Contabilidad</td>
-                                                                        <td>Realizada</td>
-                                                                </tr>
-                                                                 <tr>
-                                                                        <td>Reunión</td>
-                                                                        <td>Comedor</td>
-                                                                        <td>12/08/2025</td>
-                                                                        <td>Dep. Contabilidad</td>
-                                                                        <td>Realizada</td>
-                                                                </tr>
-                                                                 <tr>
-                                                                        <td>Reunión</td>
-                                                                        <td>Comedor</td>
-                                                                        <td>12/08/2025</td>
-                                                                        <td>Dep. Contabilidad</td>
-                                                                        <td>Realizada</td>
-                                                                </tr>
-
-                                                </tbody>
-
-                                        </table>
+                                                        </thead>
+        
+                                                        <tbody id="bodyEventList">
+        
+                                                                <tr>
+                                                                                <td class="evento" >Reunión</td>
+                                                                                <td>Comedor</td>
+                                                                                <td  class="fecha" >22/09/2021</td>
+                                                                                <td class="departamento">Dep. Contabilidad</td>
+                                                                                <td>Realizada</td>
+                                                                 </tr>
+                                                                        <tr>
+                                                                                <td class="evento" >Taller</td>
+                                                                                <td>Salon de reunion</td>
+                                                                                <td  class="fecha" >10/08/2022</td>
+                                                                                <td class="departamento">Dep. Ventas</td>
+                                                                                <td>Realizada</td>
+                                                                        </tr>
+        
+                                                                         <tr>
+                                                                                <td class="evento">Evento especial</td>
+                                                                                <td>Salon de general</td>
+                                                                                <td  class="fecha" >23/12/2020</td>
+                                                                                <td class="departamento">Dep. Contabilidad</td>
+                                                                                <td>Realizada</td>
+                                                                        </tr>
+                                                                         
+                                                                      
+        
+                                                        </tbody>
+        
+                                                </table>
+                                        </div>
 
 
                                         <div class="btnListEvents">
@@ -189,13 +178,44 @@
                                                 <button class="btnListEventos" id="departamento"  type="button">Departamento</button>
                                                 <button class="btnListEventos" id="fecha"  type="button">Fecha</button>
                                         </div>
+
                                         <span class="scroll"></span>
                         
                                 </div>
+                        </div>
+                        <button class="agregarEvento" type="button">Crear evento</button>
 
+                        <div class="newEvento">
+                                <div class="box">
+                                         <h4>Crear nuevo evento</h4>
+                                        <div class="group">
+                                                
+                                                <div class="sectionInput">
+                                                        <label for="">Evento</label>
+                                                        <input type="text" required maxlength="20" placeholder="Taller">
+                                                </div>
+                                                <div class="sectionInput">
+                                                        <label for="">Lugar</label>
+                                                        <input type="text" required maxlength="20" placeholder="Salon de reuniones">
+                                                </div>
+                                                
 
+                                        </div>
+                                       <div class="group">
+                                               
+                                                <div class="sectionInput">
+                                                        <label for="">Fecha</label>
+                                                        <input type="date" required maxlength="20" placeholder="22/10/2025">
+                                                </div>
+                                                <div class="sectionInput">
+                                                        <label for="">Participantes</label>
+                                                        <input type="text" required maxlength="20" placeholder="Salon de reuniones">
+                                                </div>
+                                                
 
+                                        </div>
 
+                                </div>
                         </div>
 
                     </div>     

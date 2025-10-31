@@ -7,55 +7,15 @@ if(nameUser){
 
     
 }
-const btnEliminate = document.querySelectorAll("#eliminate");
-btnEliminate.forEach(btn => {
-    btn.addEventListener("click", () =>{      
-        btn.parentElement.parentElement.remove();
-    });
-
-});
 
 
-const container = document.querySelector('.boxReunion');
-const content = document.querySelector('.contentReunion');
-const scrollBar = document.querySelector('.scrollBox');
 
-const scrollBarHeight = container.clientHeight / content.scrollHeight * container.clientHeight;
-scrollBar.style.height = scrollBarHeight + 'px';
-
-let isDragging = false;
-let startY, startTop;
-
-scrollBar.addEventListener('mousedown', e => {
-  isDragging = true;
-  startY = e.clientY;
-  startTop = scrollBar.offsetTop;
-  document.body.style.userSelect = 'none';
-});
-
-document.addEventListener('mousemove', e => {
-  if (!isDragging) return;
-  const delta = e.clientY - startY;
-  let newTop = startTop + delta;
-
-  newTop = Math.max(0, Math.min(newTop, container.clientHeight - scrollBarHeight));
-  scrollBar.style.top = newTop + 'px';
-
-  const scrollPercent = newTop / (container.clientHeight - scrollBarHeight);
-  content.style.top = -scrollPercent * (content.scrollHeight - container.clientHeight) + 'px';
-});
-
-document.addEventListener('mouseup', () => {
-  isDragging = false;
-  document.body.style.userSelect = 'auto';
-});
-
-
+//estadistica apartado
 const btnsGraficos = document.querySelectorAll(".btnGrafico");
 const grafico = document.querySelector("#grafico");
 
 btnsGraficos.forEach(btn => {
-   btn.addEventListener("click", (e) => { 
+   btn.addEventListener("click", ({currentTarget}) => { 
 
             btnsGraficos.forEach(btnActive => {
                 btnActive.classList.remove("active");
@@ -63,14 +23,12 @@ btnsGraficos.forEach(btn => {
                 grafico.classList.remove("participante");
             });
 
-            e.target.classList.add("active");
+           currentTarget.classList.add("active");
 
-          if(e.target.id === 'btnGraficosPart'){
+          if(currentTarget.id === 'btnGraficosPart'){
               grafico.classList.add("participante");
-
           }
-          if (e.target.id === 'btnGraficosAsis'){
-    
+          if (currentTarget.id === 'btnGraficosAsis'){
                 grafico.classList.add("asistencia");
            }
           
@@ -91,7 +49,6 @@ const meses = [
     "Noviembre",
     "Diciembre"
 ];
-
 
 const contenedor = document.querySelector(".eje-y");
 let mesActivo = "Enero";
@@ -135,4 +92,98 @@ function reescribirMeses(array){
     
 }
 
+
 reescribirMeses(newListMonths(mesActivo, meses));
+
+
+// eventos
+const btnListEventos = document.querySelectorAll(".btnListEventos");
+const eventos  = document.querySelectorAll(".evento");
+const departamento = document.querySelectorAll(".departamento");
+const fecha = document.querySelectorAll(".fecha");
+
+btnListEventos.forEach(btn => {
+        btn.addEventListener("click", ({currentTarget}) => {
+              btnListEventos.forEach(eliminate => {
+                    eliminate.classList.remove("active");
+                     eventos.forEach(evento => {
+                            evento.classList.remove("active");
+                      });      
+                      departamento.forEach(dep => {
+                      dep.classList.remove("active");
+                  });
+                    fecha.forEach(f => {
+                        f.classList.remove("active");
+                  });
+
+              });
+              
+              currentTarget.classList.add("active");
+
+              if(currentTarget.id === 'evento'){    
+                  eventos.forEach(evento => {
+                            evento.classList.add("active");
+                      });      
+              }
+              if(currentTarget.id === 'departamento'){
+               
+                  departamento.forEach(dep => {
+                      dep.classList.add("active");
+                  });
+              }
+              if(currentTarget.id === 'fecha'){
+                 
+                  fecha.forEach(f => {
+                        f.classList.add("active");
+                  });
+              }
+        });
+
+});
+
+
+
+
+
+//banner box
+const btnEliminate = document.querySelectorAll("#eliminate");
+btnEliminate.forEach(btn => {
+    btn.addEventListener("click", () =>{      
+        btn.parentElement.parentElement.remove();
+    });
+
+});
+
+const container = document.querySelector('.boxReunion');
+const content = document.querySelector('.contentReunion');
+const scrollBar = document.querySelector('.scrollBox');
+
+const scrollBarHeight = container.clientHeight / content.scrollHeight * container.clientHeight;
+scrollBar.style.height = scrollBarHeight + 'px';
+
+let isDragging = false;
+let startY, startTop;
+
+scrollBar.addEventListener('mousedown', e => {
+  isDragging = true;
+  startY = e.clientY;
+  startTop = scrollBar.offsetTop;
+  document.body.style.userSelect = 'none';
+});
+
+document.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  const delta = e.clientY - startY;
+  let newTop = startTop + delta;
+
+  newTop = Math.max(0, Math.min(newTop, container.clientHeight - scrollBarHeight));
+  scrollBar.style.top = newTop + 'px';
+
+  const scrollPercent = newTop / (container.clientHeight - scrollBarHeight);
+  content.style.top = -scrollPercent * (content.scrollHeight - container.clientHeight) + 'px';
+});
+
+document.addEventListener('mouseup', () => {
+  isDragging = false;
+  document.body.style.userSelect = 'auto';
+});
