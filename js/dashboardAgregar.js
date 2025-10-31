@@ -124,8 +124,6 @@ function validarEmail(email){
 
 
 saveBtn.addEventListener("click", (e) => {
-
-
     let formValido = true;
     e.preventDefault();
         campos.forEach(campo => {

@@ -8,8 +8,6 @@ if(nameUser){
     
 }
 
-
-
 //estadistica apartado
 const btnsGraficos = document.querySelectorAll(".btnGrafico");
 const grafico = document.querySelector("#grafico");
@@ -102,6 +100,26 @@ const eventos  = document.querySelectorAll(".evento");
 const departamento = document.querySelectorAll(".departamento");
 const fecha = document.querySelectorAll(".fecha");
 
+const close = document.querySelector(".close");
+const newEvento = document.querySelector(".newEvento");
+const agregarEvento = document.querySelector(".agregarEvento");
+
+const inputEvent = document.querySelector("#inputEvent");
+const  messageEvent = document.querySelector("#messageEvent");
+
+const inputLugar = document.querySelector("#inputLugar");
+const messageLugar = document.querySelector("#messageLugar");
+
+const inputDate = document.querySelector("#inputDate");
+const messageDate = document.querySelector("#messageDate");
+
+const inputParticipante = document.querySelector("#inputParticipante");
+const messageParticipante = document.querySelector("#messageParticipante");
+
+const bodyEventList = document.querySelector("#bodyEventList");
+const btnNewEvent = document.querySelector(".btnNewEvent");
+
+// 
 btnListEventos.forEach(btn => {
         btn.addEventListener("click", ({currentTarget}) => {
               btnListEventos.forEach(eliminate => {
@@ -141,9 +159,78 @@ btnListEventos.forEach(btn => {
 
 });
 
+close.addEventListener("click", () => {
+    newEvento.style.display  = 'none';
+});
+
+agregarEvento.addEventListener("click", () => {
+      newEvento.style.display  = 'block';
+});
 
 
+let camposEvent = [
 
+  {input: inputEvent,  validator: validarTexto, msg: messageEvent, errorMsg: "Ingrese un evento valido" },
+  {input: inputLugar, validator: validarTexto, msg: messageLugar, errorMsg: "Ingrese un lugar valido"},
+  {input: inputDate, validator: validarFecha, msg: messageDate, errorMsg: "Ingrese una fecha valida"},
+  {input: inputParticipante, validator: validarTexto, msg: messageParticipante, errorMsg: "Ingrese un departamento valido"}
+
+];
+
+camposEvent.forEach(campo => {
+  campo.input.addEventListener("input", () => {
+        campo.input.classList.remove("error-input");
+        campo.msg.textContent = "";
+        if(!campo.validator(campo.input.value)){
+            campo.input.classList.add("error-input");
+            campo.msg.textContent = campo.errorMsg;
+        }
+  });
+
+});
+
+btnNewEvent.addEventListener("click", () =>{
+
+        let formatValid = true;
+
+        camposEvent.forEach(campo => {
+            campo.input.classList.remove("error-input");
+            campo.msg.textContent = "";
+
+            if(!campo.input.value || !campo.validator(campo.input.value)){
+                    campo.input.classList.add("error-input");
+                    campo.msg.textContent = campo.errorMsg;
+                    formatValid = false;
+            }
+
+        });
+
+        if(formatValid){
+          
+            camposEvent.forEach(c => {
+                  const tr = document.createElement("tr");
+                const td = document.createElement("td");
+
+                    td.textContent = c.input.value;
+                    tr.appendChild(td);
+                    bodyEventList.appendChild(tr);
+            });
+           
+        }
+
+});
+
+
+function validarTexto(text) {
+    const textV = [...text].some(c => /[^a-zA-Z]/.test(c));
+    if(textV || text === "" || text.length < 5) return false; 
+    return true;    
+}
+function validarFecha(date){
+
+      const fecha = new Date(date);
+     return !isNaN(fecha.getTime()); 
+}
 
 //banner box
 const btnEliminate = document.querySelectorAll("#eliminate");

@@ -10,8 +10,8 @@
     color: #000000;
     list-style: none;
     text-decoration: none;
-    
 }
+
 .dashboard{
 
     display: grid;
@@ -19,6 +19,8 @@
     align-items: flex-start;
     max-width: 100%;
     gap: 30px;
+    
+    
 }
 
 .dashboard .menu{
@@ -356,42 +358,60 @@
 
 .contenedor .cards .card .newEvento{
     position: absolute;
-    width: 400px;
-    height: 400px;
+    max-width:800px;
+    height: auto;
     top: 0;
+    display: none;
     right: 0;
     color: #fff;
     left: 0;
     border-radius: 8px;
-    padding: 10px 20px;
-    background-color: #2B6853;
-    
+    padding: 20px 20px;
+    z-index: 999;
+    background-color: #161C25;
     transform: translateX(-100%);
 
 } 
 .contenedor .cards .card .newEvento .box{
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    height: auto;
     color: #fff;
+    max-width:800px;
     flex-direction: column;
 }
-.contenedor .cards .card .newEvento .box h4{
+.contenedor .cards .card .newEvento .box .sectionTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.contenedor .cards .card .newEvento .box .sectionTitle h4{
     font-size: 25px;
     font-weight: 600;
+    color: #fff;
     margin-top: 10px;
-    text-align: center;
-
+    text-align: left;
 }
+.contenedor .cards .card .newEvento .box .sectionTitle i{
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 900;
+}
+
 .contenedor .cards .card .newEvento .box .group {
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: space-between;
     color: #fff;
-    flex-direction: column;
-    
+    width: 100%;
 }
 .contenedor .cards .card .newEvento .box .group .sectionInput label{
     color: #fff;
     font-weight: 500;
+    margin-bottom: 10px;
     font-size: 16px;
 }
 .contenedor .cards .card .newEvento .box .group .sectionInput input{
@@ -400,10 +420,32 @@
     height: 30px;
     outline: none;
     border: none;
-    padding: 0.4px 0.7px 1px 0.8px;
+    border-bottom: 1px solid #000;
+    color: #fff;
+    background-color: transparent;
+}
+
+.contenedor .cards .card .newEvento .box .group .sectionInput input.error-input{
+    border-bottom: 1px solid red;
 }
 .contenedor .cards .card .newEvento .box .group .sectionInput input::placeholder{
     padding-left: 5px;
+    color: #fff;
+    font-weight: lighter;
+}
+.contenedor .cards .card .newEvento .box .group .sectionInput small{
+    color: red;
+    font-weight: normal;
+}
+
+.contenedor .cards .card .newEvento .box button{
+    width: 150px;
+    color: #fff;
+    height: 30px;
+    font-weight: 500;
+    border-radius: 6px;
+    background-color: #2B6853;
+    border: none;
 }
 /*  */
 

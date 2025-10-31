@@ -16,6 +16,7 @@
 
     <section class="dashboard">
 
+        
         <nav class="menu">
             <div class="infoUser">
                 <img src="img/user1.png" alt="foto de perfil">
@@ -57,6 +58,7 @@
         <div class="cards">
 
                 <div class="card ">
+
                         <h3>Revisa las estadísticas de tus ultimas reuniones  </h3>
                         <div class="estadisticas">
 
@@ -186,17 +188,23 @@
                         <button class="agregarEvento" type="button">Crear evento</button>
 
                         <div class="newEvento">
+                              
                                 <div class="box">
-                                         <h4>Crear nuevo evento</h4>
-                                        <div class="group">
-                                                
+                                        <div class="sectionTitle">
+                                                  <h4>Crear nuevo evento</h4>
+                                                  <i class="bi bi-x-lg  close"></i>
+                                        </div>
+                                       
+                                        <div class="group">                 
                                                 <div class="sectionInput">
                                                         <label for="">Evento</label>
-                                                        <input type="text" required maxlength="20" placeholder="Taller">
+                                                        <input type="text" id="inputEvent" required maxlength="20" placeholder="Taller">
+                                                        <small aria-live = "polite" id="messageEvent"></small>
                                                 </div>
                                                 <div class="sectionInput">
                                                         <label for="">Lugar</label>
-                                                        <input type="text" required maxlength="20" placeholder="Salon de reuniones">
+                                                        <input type="text" id="inputLugar" required maxlength="20" placeholder="Salon de reuniones">
+                                                         <small aria-live = "polite" id="messageLugar"></small>
                                                 </div>
                                                 
 
@@ -205,16 +213,19 @@
                                                
                                                 <div class="sectionInput">
                                                         <label for="">Fecha</label>
-                                                        <input type="date" required maxlength="20" placeholder="22/10/2025">
+                                                        <input type="date" id="inputDate" required  >
+                                                         <small aria-live = "polite" id="messageDate" ></small>
                                                 </div>
                                                 <div class="sectionInput">
-                                                        <label for="">Participantes</label>
-                                                        <input type="text" required maxlength="20" placeholder="Salon de reuniones">
+                                                        <label for="">Dep. Participante</label>
+                                                        <input type="text" id="inputParticipante" required maxlength="20" placeholder="Salon de reuniones">
+                                                        <small aria-live = "polite" id="messageParticipante" ></small>
                                                 </div>
                                                 
 
                                         </div>
 
+                                        <button type="button" class="btnNewEvent">Crear Evento</button>
                                 </div>
                         </div>
 
@@ -222,6 +233,7 @@
 
                 </div>
 
+                <!-- bannerReuniones -->
                 <div class="bannerReuniones">
 
                         <h3>Reuniones de hoy</h3>
