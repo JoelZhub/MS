@@ -204,10 +204,10 @@
 .contenedor .cards .card .estadisticas .contenido .grafico-header{
     margin-bottom: 10px;
 }
-.contenedor .cards .card .estadisticas .contenido .grafico-header .element-activo{
+.contenedor .cards .card .estadisticas .contenido  .element-activo{
     background-color: #161C25;
-    font-size: 0.9em;
-    padding: 4px 12px;
+    font-size: 0.8em;
+    padding: 4px 5px;
     color: #ffff;
     font-weight: bold;
     text-align: center;
@@ -256,7 +256,6 @@
 .contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .scroll-vertical{
     display:flex;
     width: 30px;
-   
     align-items: center;
     justify-content: space-around;
     flex-direction: column;

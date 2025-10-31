@@ -1,4 +1,3 @@
-
 if(nameUser){
     
     const username = localStorage.getItem("username");
@@ -8,7 +7,6 @@ if(nameUser){
 
     
 }
-
 const btnEliminate = document.querySelectorAll("#eliminate");
 btnEliminate.forEach(btn => {
     btn.addEventListener("click", () =>{      
@@ -54,19 +52,87 @@ document.addEventListener('mouseup', () => {
 
 
 const btnsGraficos = document.querySelectorAll(".btnGrafico");
+const grafico = document.querySelector("#grafico");
 
 btnsGraficos.forEach(btn => {
+   btn.addEventListener("click", (e) => { 
 
-     if(btn.classList.contains('active')){
-                  btn.classList.remove('active');
-        }
-        btn.addEventListener("click", () => {
-            
-        
-            
-           
+            btnsGraficos.forEach(btnActive => {
+                btnActive.classList.remove("active");
+                grafico.classList.remove("asistencia");
+                grafico.classList.remove("participante");
+            });
 
-        });
+            e.target.classList.add("active");
 
+          if(e.target.id === 'btnGraficosPart'){
+              grafico.classList.add("participante");
 
+          }
+          if (e.target.id === 'btnGraficosAsis'){
+    
+                grafico.classList.add("asistencia");
+           }
+          
+      });      
 });
+  
+const meses = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre"
+];
+
+
+const contenedor = document.querySelector(".eje-y");
+let mesActivo = "Enero";
+function newListMonths(activo, meses){
+    
+        let newArray = [
+
+              {nombre: activo, activo: true} 
+
+        ];
+
+        for (let index = 0; index < meses.length; index++) {
+            if(meses[index] === activo) continue;
+            newArray.push({nombre: meses[index], activo: false});
+           
+        }
+
+        return newArray;
+  }
+
+function reescribirMeses(array){
+ 
+  contenedor.innerHTML = '';
+  array.forEach(mes => {
+
+          const span = document.createElement('span');
+          span.textContent = mes.nombre;
+
+          if(mes.activo){
+              span.classList.add('element-activo');
+          }
+          span.addEventListener("click", () => {
+                mesActivo = mes.nombre;
+                const newArray = newListMonths(mesActivo, meses);
+                reescribirMeses(newArray);
+          });
+
+          contenedor.appendChild(span);
+          
+  });
+    
+}
+
+reescribirMeses(newListMonths(mesActivo, meses));
