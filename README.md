@@ -1,3 +1,4 @@
+
 #MS – Gestor de Reuniones Empresariales
 
 MS es un proyecto front-end enfocado en la gestión de reuniones empresariales presenciales. Su objetivo es facilitar la organización y administración de eventos internos, talleres y reuniones que se realizan dentro de una empresa.
@@ -38,5 +39,4 @@ Todas las funcionalidades son simuladas a nivel front-end.
 
 📘 #Estado del proyecto
 
-🧩 Proyecto en desarrollo (versión front-end).
-Este proyecto de momento no lo tengo pensado para agregarle la parte de backend o integraciones a APis. 
+🧩 Proyecto en desarrollo (versión front-end). Este proyecto de momento no lo tengo pensado para agregarle la parte de backend o integraciones a APis.

@@ -135,10 +135,7 @@ saveBtn.addEventListener("click", (e) => {
     });
 
     if(formValido){
-            Leader.show(2000, "Datos guardados correctamente", () => {
                 window.location.href = 'dahsboardHome.html';
-            });
-            
     }
    
 

@@ -10,8 +10,8 @@
     color: #000000;
     list-style: none;
     text-decoration: none;
-    
 }
+
 .dashboard{
 
     display: grid;
@@ -19,6 +19,8 @@
     align-items: flex-start;
     max-width: 100%;
     gap: 30px;
+    
+    
 }
 
 .dashboard .menu{
@@ -204,10 +206,10 @@
 .contenedor .cards .card .estadisticas .contenido .grafico-header{
     margin-bottom: 10px;
 }
-.contenedor .cards .card .estadisticas .contenido .grafico-header .element-activo{
+.contenedor .cards .card .estadisticas .contenido  .element-activo{
     background-color: #161C25;
-    font-size: 0.9em;
-    padding: 4px 12px;
+    font-size: 0.8em;
+    padding: 4px 5px;
     color: #ffff;
     font-weight: bold;
     text-align: center;
@@ -256,7 +258,6 @@
 .contenedor .cards .card .estadisticas .contenido .area-grafico-wrapper .scroll-vertical{
     display:flex;
     width: 30px;
-   
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
@@ -300,10 +301,13 @@
 .contenedor .cards .card .btnsEstadisticas button.active{
     background-color: #161C25;
 }
+
+/*  */
 .contenedor .cards .card .eventos{
     background-color: #ffffff;
     height: 381px;
     width: 100%;
+    position: relative;
     overflow: hidden;
     border-radius: 22px;
     padding: 10px;
@@ -318,88 +322,183 @@
 } .contenedor .cards .card .eventos .listEvenst th{
     font-size: 16px;
     font-weight: 600;
-    
 }
  .contenedor .cards .card .eventos .listEvenst th, td{
-    padding: 10px 10px;
+    padding: 7px 8px;
+
  }
+.contenedor .cards .card .eventos .listEvenst .evento.active{
+    font-weight: 700;
+}
+.contenedor .cards .card .eventos .listEvenst .departamento.active{
+    font-weight: 700;
+}
+ .contenedor .cards .card .eventos .listEvenst .fecha.active{
+    font-weight: 700;
+}
 .contenedor .cards .card .eventos .contenido{
-    height: 400px;
+    min-height: 350px;
     width: 100%;
     position: relative;
+    overflow: hidden;
+
 }
 
-.contenedor .cards .card .eventos .btnListEvents{
-    display: flex;
-    margin-top: 30px;
-    justify-content: space-around;
-}
-.contenedor .cards .card .eventos .btnListEvents button{
-    width: 130px;
-    height: 30px;
-    color: #fff;
-    font-size: 15px;
-    border: none;
-    background-color: rgba(43, 104, 83, 0.85);
-    border-radius: 10px;
-}
-.contenedor .cards .card .eventos .btnListEvents button.active{
-
-    background-color: #2B6853;
-}
 .contenedor .cards .card .eventos .contenido .scroll{
     position: absolute;
     width: 5px;
     right: 0;
     cursor: pointer;
-    top: 35%;
-    transform: translateY(-35%);
+    top: 25%;
+    transform: translateY(-25%);
     border-radius: 6px;
     background-color: #434A54;
     height: 120px;
 }
 
+.contenedor .cards .card .newEvento{
+    position: absolute;
+    max-width:800px;
+    height: auto;
+    top: 0;
+    display: none;
+    right: 0;
+    color: #fff;
+    left: 0;
+    border-radius: 8px;
+    padding: 20px 20px;
+    z-index: 999;
+    background-color: #161C25;
+    transform: translateX(-100%);
+
+} 
+.contenedor .cards .card .newEvento .box{
+    display: flex;
+    gap: 15px;
+    height: auto;
+    color: #fff;
+    max-width:800px;
+    flex-direction: column;
+}
+.contenedor .cards .card .newEvento .box .sectionTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.contenedor .cards .card .newEvento .box .sectionTitle h4{
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 10px;
+    text-align: left;
+}
+.contenedor .cards .card .newEvento .box .sectionTitle i{
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.contenedor .cards .card .newEvento .box .group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    width: 100%;
+}
+.contenedor .cards .card .newEvento .box .group .sectionInput label{
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.contenedor .cards .card .newEvento .box .group .sectionInput input{
+    width: 100%;
+    font-size: 13px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    color: #fff;
+    background-color: transparent;
+}
+
+.contenedor .cards .card .newEvento .box .group .sectionInput input.error-input{
+    border-bottom: 1px solid red;
+}
+.contenedor .cards .card .newEvento .box .group .sectionInput input::placeholder{
+    padding-left: 5px;
+    color: #fff;
+    font-weight: lighter;
+}
+.contenedor .cards .card .newEvento .box .group .sectionInput small{
+    color: red;
+    font-weight: normal;
+}
+
+.contenedor .cards .card .newEvento .box button{
+    width: 150px;
+    color: #fff;
+    height: 30px;
+    font-weight: 500;
+    border-radius: 6px;
+    background-color: #2B6853;
+    border: none;
+}
+/*  */
+
 
 .contenedor .bannerReuniones{
     margin-top: 140px;
     width: 100%;
+    padding: 10px;
+    position: relative;
+    border-radius: 9px;
+    box-shadow: 0.9px 0.9px 0.8px #000;
+    background-color: #ffffff;
+    height: 280px;
    
 }
 .contenedor .bannerReuniones  h3{
-
     color: #434A54;
     font-weight: normal;
     font-size: 23px;
-    margin-bottom: 20px;
+
 }
 
 .contenedor .bannerReuniones  .boxReunion{
 
     width: 100%;
-    border-radius: 9px;
-    box-shadow: 0.9px 0.9px 0.8px 0.8px #000;
-    background-color: #ffffff;
-    height: 260px;
+    height: 160px; 
     position: relative;
+    overflow: hidden;
 
 }
-
-.contenedor .bannerReuniones .boxReunion .scroll{
+.contenedor .bannerReuniones .boxReunion .scrollBox{
     position: absolute;
     width: 8px;
-    right: 50px;
+    right: 60px;
     cursor: pointer;
-    top: 30%;
-    transform: translateY(-30%);
+    top: 10px;
     border-radius: 6px;
     background-color: #434A54;
-    height: 190px;
 }
+.contenedor .bannerReuniones .boxReunion .contentReunion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 
 .contenedor .bannerReuniones .boxReunion .listReuniones{
     width: 90%;
     font-size: 16px;
    text-align: left;
+    position: relative;
+
 }
 
 .contenedor .bannerReuniones .boxReunion .listReuniones td{
@@ -418,4 +517,41 @@
 }
 .contenedor .bannerReuniones .boxReunion .listReuniones .trash{
     background-color: red;
+}
+
+
+/*  */
+/*  */
+.contenedor .cards .card .eventos .btnListEvents{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+.contenedor .cards .card .eventos .btnListEvents button{
+    width: 130px;
+    height: 30px;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    background-color: rgba(43, 104, 83, 0.85);
+    border-radius: 10px;
+}
+.contenedor .cards .card .eventos .btnListEvents button.active{
+
+    background-color: #2B6853;
+}
+.contenedor .cards .card  .agregarEvento{
+    width: 200px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #161C25;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+.contenedor .cards .card  .agregarEvento:hover{
+    filter: brightness(0.6);
+   
 }
