@@ -206,16 +206,18 @@ btnNewEvent.addEventListener("click", () =>{
         });
 
         if(formatValid){
-          
+           const tr = document.createElement("tr");
+            const tdEstado = document.createElement("td");
+            tdEstado.textContent = "Pautada";
             camposEvent.forEach(c => {
-                  const tr = document.createElement("tr");
-                const td = document.createElement("td");
-
+                  const td = document.createElement("td");
                     td.textContent = c.input.value;
                     tr.appendChild(td);
-                    bodyEventList.appendChild(tr);
+                        
             });
-           
+          
+            tr.appendChild(tdEstado);
+            bodyEventList.appendChild(tr);
         }
 
 });
